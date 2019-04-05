@@ -446,7 +446,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -471,7 +471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -1.83}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -923,6 +923,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grid
+      objectReference: {fileID: 0}
+    - target: {fileID: 1473464176785790936, guid: ff0dfaf031f63904b9c35465050bdb9a,
+        type: 3}
+      propertyPath: m_Name
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 4392526949480926579, guid: ff0dfaf031f63904b9c35465050bdb9a,
         type: 3}
@@ -1433,13 +1438,14 @@ PrefabInstance:
     - target: {fileID: 4392526949480926579, guid: ff0dfaf031f63904b9c35465050bdb9a,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[11].m_RefCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4392526949480926579, guid: ff0dfaf031f63904b9c35465050bdb9a,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[11].m_Data
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: b45394d758b990140a64726854bcc0be,
+        type: 3}
     - target: {fileID: 4392526949480926579, guid: ff0dfaf031f63904b9c35465050bdb9a,
         type: 3}
       propertyPath: m_Tiles.Array.data[32].second.m_TileIndex
@@ -1689,6 +1695,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6934c72a880181a4a94d043edfdfc8c2,
         type: 3}
+    - target: {fileID: 4392526949480926579, guid: ff0dfaf031f63904b9c35465050bdb9a,
+        type: 3}
+      propertyPath: m_Tiles.Array.data[11].second.m_TileSpriteIndex
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392526949480926579, guid: ff0dfaf031f63904b9c35465050bdb9a,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[4].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4392526949480926579, guid: ff0dfaf031f63904b9c35465050bdb9a,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[4].m_Data
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 652688645546088063, guid: ff0dfaf031f63904b9c35465050bdb9a,
         type: 3}
       propertyPath: m_Name
@@ -3487,11 +3508,6 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[47].second.m_ColliderType
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1473464176785790936, guid: ff0dfaf031f63904b9c35465050bdb9a,
-        type: 3}
-      propertyPath: m_Name
-      value: Terrain
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff0dfaf031f63904b9c35465050bdb9a, type: 3}
 --- !u!1001 &7311453468065974930
@@ -3519,7 +3535,7 @@ PrefabInstance:
     - target: {fileID: 7311453468151741602, guid: cb1ed6ae29e86cc43a518244b4af6366,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6467175
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7311453468151741602, guid: cb1ed6ae29e86cc43a518244b4af6366,
         type: 3}
@@ -3560,6 +3576,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723253147627812166, guid: cb1ed6ae29e86cc43a518244b4af6366,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb1ed6ae29e86cc43a518244b4af6366, type: 3}

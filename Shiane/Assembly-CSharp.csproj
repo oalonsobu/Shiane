@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Common\MenuPauseController.cs" />
     <Compile Include="Assets\Scripts\Common\MissionCompleteMenuController.cs" />
     <Compile Include="Assets\Scripts\GameControllers\GameLoopManager.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMovementController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/oscar/Desktop/uoc/Shiane/Shiane/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
