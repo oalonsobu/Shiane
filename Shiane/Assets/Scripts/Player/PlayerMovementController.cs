@@ -4,31 +4,29 @@ using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour {
 
-    float playerSpeed;
+    [Range(0, 5f)] [SerializeField] float playerSpeed = 5f;
+    [Range(0, .3f)] [SerializeField] float movementSmoothing = .3f;
+
+    Vector3 currentVelocity;
+    Rigidbody2D rigidbody;
+    bool isFacingRight = true;
 
     void Start ()
     {
-        playerSpeed = 5;
+        currentVelocity = Vector2.zero;
+        rigidbody = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        move();
+        Move();
     }
 
-    void move()
+    void Move()
     {
-        Vector2 vectorDirection = new Vector2(0, 0);
-        if (Input.GetKey(KeyCode.D))
-        {
-            vectorDirection = Vector2.right;
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            vectorDirection = Vector2.left;
-        }
-
-        transform.Translate(vectorDirection * playerSpeed * Time.deltaTime, Space.World);
+        float movement = Input.GetAxis("Horizontal");
+        Vector2 desiredVelocity = Vector2.right * movement * playerSpeed;
+        rigidbody.velocity = Vector3.SmoothDamp(rigidbody.velocity, desiredVelocity, ref currentVelocity, movementSmoothing);
     }
 
 }
