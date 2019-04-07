@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Common\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\Common\MenuPauseController.cs" />
     <Compile Include="Assets\Scripts\Common\MissionCompleteMenuController.cs" />
+    <Compile Include="Assets\Scripts\GameControllers\CameraController.cs" />
     <Compile Include="Assets\Scripts\GameControllers\GameLoopManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovementController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

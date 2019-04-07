@@ -133,3 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 5
   movementSmoothing: 0.3
+  jumpForce: 400
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512

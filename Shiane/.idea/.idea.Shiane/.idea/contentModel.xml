@@ -16,6 +16,7 @@
             <e p="MissionCompleteMenuController.cs" t="Include" />
           </e>
           <e p="GameControllers" t="Include">
+            <e p="CameraController.cs" t="Include" />
             <e p="GameLoopManager.cs" t="Include" />
           </e>
           <e p="Player" t="Include">

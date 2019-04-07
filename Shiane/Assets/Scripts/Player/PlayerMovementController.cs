@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovementController : MonoBehaviour {
 
     [Range(0, 5f)] [SerializeField] float playerSpeed = 5f;
-    [Range(0, .3f)] [SerializeField] float movementSmoothing = .3f;
+    [Range(0, .3f)] [SerializeField] float movementSmoothing = .05f;
     [Range(200, 450)] [SerializeField] int jumpForce = 400;
     [SerializeField] LayerMask groundLayer = 400;
 
