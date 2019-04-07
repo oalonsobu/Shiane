@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuPauseController : MonoBehaviour {
 
     public void Resume() {
-        GameLoopManager.instance.pauseGame();
+        GameLoopManager.instance.PauseGame();
     }
 
     public void Restart() {

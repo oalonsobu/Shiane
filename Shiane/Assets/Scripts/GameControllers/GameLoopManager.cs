@@ -40,26 +40,26 @@ public class GameLoopManager : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.L) && !pauseMenu.activeSelf) {
-            showGameOverMenu();
+            ShowGameOverMenu();
         } else if (Input.GetKeyDown(KeyCode.O) && !pauseMenu.activeSelf) {
-            showMissionCompleteMenu();
+            ShowMissionCompleteMenu();
         } else if (Input.GetKeyDown(KeyCode.P)) {
-            pauseGame();
+            PauseGame();
         }
     }
 
-    void showGameOverMenu() {
+    void ShowGameOverMenu() {
         gameOverMenu.SetActive(true);
         Time.timeScale = 0;
     }
 
-    void showMissionCompleteMenu() {
+    void ShowMissionCompleteMenu() {
         missionCompleteMenu.SetActive(true);
         missionCompleteMenu.GetComponent<MissionCompleteMenuController>().setText(0,1);
         Time.timeScale = 0;
     }
 
-    public void pauseGame() {
+    void ShowPauseGame() {
         if (pauseMenu.activeSelf) {
             pauseMenu.SetActive(false);
             Time.timeScale = 1;
@@ -68,6 +68,13 @@ public class GameLoopManager : MonoBehaviour {
             Time.timeScale = 0;
         }
     }
+    
+    public void PauseGame() {
+        ShowPauseGame();
+    }
 
-
+    public void GameOver()
+    {
+        ShowGameOverMenu();
+    }
 }

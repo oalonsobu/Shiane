@@ -14,7 +14,6 @@ public class PlayerMovementController : MonoBehaviour {
     CapsuleCollider2D collider;
     bool isFacingRight = true;
     bool grounded = true;
-
     float colliderSizeRaycast = 0;
 
     void Start ()
@@ -28,8 +27,11 @@ public class PlayerMovementController : MonoBehaviour {
     void FixedUpdate()
     {
         grounded = UpdateGrounded();
-        Debug.Log(grounded);
         Move();
+        if (rigidbody.position.y < -2)
+        {
+            KillPlayer();
+        }
     }
 
     bool UpdateGrounded()
@@ -51,6 +53,11 @@ public class PlayerMovementController : MonoBehaviour {
         float movementForce = Input.GetAxis("Horizontal");
         Vector2 desiredVelocity = Vector2.right * movementForce * playerSpeed;
         rigidbody.velocity = Vector3.SmoothDamp(rigidbody.velocity, desiredVelocity, ref currentVelocity, movementSmoothing);
+    }
+
+    void KillPlayer()
+    {
+        GameLoopManager.instance.GameOver();
     }
 
 }
