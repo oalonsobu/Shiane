@@ -7,7 +7,8 @@ public class PlayerMovementController : MonoBehaviour {
     [Range(0, 5f)] [SerializeField] float playerSpeed = 5f;
     [Range(0, .3f)] [SerializeField] float movementSmoothing = .05f;
     [Range(200, 450)] [SerializeField] int jumpForce = 400;
-    [SerializeField] LayerMask groundLayer = 400;
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] LayerMask enemyLayer;
 
     Vector3 currentVelocity;
     Rigidbody2D rigidbody;
@@ -37,8 +38,19 @@ public class PlayerMovementController : MonoBehaviour {
     bool UpdateGrounded()
     {
         //TODO: maybe two raycast, one in each side of the sprite...
-        RaycastHit2D hit = Physics2D.Raycast(collider.transform.position, Vector2.down, colliderSizeRaycast, groundLayer);
-        return hit.collider != null;
+        RaycastHit2D hit = Physics2D.Raycast(collider.transform.position, Vector2.down, colliderSizeRaycast, groundLayer | enemyLayer);
+        if (hit.collider != null && (1 << hit.collider.gameObject.layer) == enemyLayer)
+        {
+            //TODO: jumping over it will kill the enemy ??
+            hit.transform.GetComponent<EnemyController>().TakeDamage(10);
+            rigidbody.AddForce(new Vector2(0f, jumpForce));
+            //TODO: reset dash when done
+        }
+        else if (hit.collider != null && (1 << hit.collider.gameObject.layer) == groundLayer)
+        {
+            return true;
+        }
+        return false;
     }
 
     void Move()
