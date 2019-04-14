@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
@@ -7,21 +8,23 @@ using UnityEngine.VR;
 public class PlayerMovementController : MonoBehaviour {
 
     [Range(0, 5f)] [SerializeField] float playerSpeed = 5f;
-    [Range(0, 10f)] [SerializeField] float dashVelocity = 10f;
+    [Range(0, 20f)] [SerializeField] float dashVelocity = 20f;
     [Range(0, .3f)] [SerializeField] float movementSmoothing = .05f;
     [Range(200, 450)] [SerializeField] int jumpForce = 400;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask enemyLayer;
 
     Vector3 currentVelocity;
-    float dasTime = 0.1f;
+    Vector3 dashDirection;
+    float dashTime = 0.25f;
+    float currentDashTime;
+    bool canDash = false;
+    bool dashReleased = true;
+    bool isDashing = false;
     Rigidbody2D rigidbody;
     CapsuleCollider2D collider;
     bool isFacingRight = true;
     bool grounded = true;
-    bool dashUsed = false;
-    bool isDashing = false;
-    Vector3 dashDirection;
     float colliderSizeRaycast = 0;
 
     void Start ()
@@ -38,6 +41,7 @@ public class PlayerMovementController : MonoBehaviour {
         Dash();
         Jump();
         Move();
+        dashReleased = dashReleased || Input.GetAxis("Dash") <= 0; //To avoid continuously dashing;
         if (rigidbody.position.y < -2)
         {
             KillPlayer();
@@ -57,8 +61,8 @@ public class PlayerMovementController : MonoBehaviour {
         
         if (hit.collider != null)
         {
-            dashUsed = isDashing;
-            grounded = true;
+            canDash = true;
+            grounded = true;     
         }
         else
         {
@@ -78,19 +82,26 @@ public class PlayerMovementController : MonoBehaviour {
     
     void Dash()
     {
-        bool dash = Input.GetAxis("Dash") > 0;
-        if (dash && !isDashing && !dashUsed)
+        bool dash = dashReleased && Input.GetAxis("Dash") > 0;
+        Vector3 vForce = Vector3.up * Input.GetAxis("Vertical");
+        Vector3 hForce = Vector3.right * Input.GetAxis("Horizontal");
+        dashDirection = hForce.normalized + vForce.normalized;
+        if (canDash && dash && Math.Abs(dashDirection.magnitude) > 0)
         {
-            Vector3 hForce = Vector3.up * Input.GetAxis("Horizontal");
-            Vector3 vForce = Vector3.right * Input.GetAxis("Vertical");
-            dashDirection = hForce.normalized + vForce.normalized;
+            canDash  = false;
+            dashReleased = false;
+            currentDashTime = dashTime;
             isDashing = true;
-            dashUsed  = true;
         }
         
-        if (isDashing)
+        if (currentDashTime >= 0)
         {
-            rigidbody.AddForce(new Vector2(0f, jumpForce));
+            rigidbody.velocity = dashDirection * dashVelocity;
+            currentDashTime -= Time.deltaTime;
+        }
+        else if (isDashing)
+        {
+            rigidbody.velocity = Vector3.zero;
             isDashing = false;
         }
     }
@@ -109,5 +120,7 @@ public class PlayerMovementController : MonoBehaviour {
     {
         GameLoopManager.instance.GameOver();
     }
+    
+    
 
 }
