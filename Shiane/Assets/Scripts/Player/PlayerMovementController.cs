@@ -16,7 +16,7 @@ public class PlayerMovementController : MonoBehaviour {
 
     Vector3 currentVelocity;
     Vector3 dashDirection;
-    float dashTime = 0.25f;
+    float dashTime = 0.1f;
     float currentDashTime;
     bool canDash = false;
     bool dashReleased = true;
@@ -41,6 +41,7 @@ public class PlayerMovementController : MonoBehaviour {
         Dash();
         Jump();
         Move();
+        CheckForEnemies();
         dashReleased = dashReleased || Input.GetAxis("Dash") <= 0; //To avoid continuously dashing;
         if (rigidbody.position.y < -2)
         {
@@ -92,6 +93,7 @@ public class PlayerMovementController : MonoBehaviour {
             dashReleased = false;
             currentDashTime = dashTime;
             isDashing = true;
+            Physics2D.IgnoreLayerCollision(0, 10, true);
         }
         
         if (currentDashTime >= 0)
@@ -103,6 +105,7 @@ public class PlayerMovementController : MonoBehaviour {
         {
             rigidbody.velocity = Vector3.zero;
             isDashing = false;
+            Physics2D.IgnoreLayerCollision(0, 10, false);
         }
     }
     
@@ -116,11 +119,21 @@ public class PlayerMovementController : MonoBehaviour {
         }
     }
 
+    void CheckForEnemies()
+    {
+        if (isDashing)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(collider.transform.position, Vector2.right, 0.5f, enemyLayer);
+            if (hit.collider != null)
+            {
+                hit.transform.GetComponent<EnemyController>().TakeDamage(10);
+            }
+        }
+    }
+
     void KillPlayer()
     {
         GameLoopManager.instance.GameOver();
     }
-    
-    
 
 }
