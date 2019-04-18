@@ -10,6 +10,7 @@
           <e p="Common" t="Include">
             <e p="AudioHelper.cs" t="Include" />
             <e p="CreditsController.cs" t="Include" />
+            <e p="DialogueBoxController.cs" t="Include" />
             <e p="GameOverMenuController.cs" t="Include" />
             <e p="MainMenuController.cs" t="Include" />
             <e p="MenuPauseController.cs" t="Include" />
@@ -20,6 +21,7 @@
           </e>
           <e p="GameControllers" t="Include">
             <e p="CameraController.cs" t="Include" />
+            <e p="DialoguePointController.cs" t="Include" />
             <e p="GameLoopManager.cs" t="Include" />
           </e>
           <e p="Player" t="Include">

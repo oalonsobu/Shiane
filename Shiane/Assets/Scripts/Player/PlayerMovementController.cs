@@ -93,7 +93,7 @@ public class PlayerMovementController : MonoBehaviour {
             dashReleased = false;
             currentDashTime = dashTime;
             isDashing = true;
-            Physics2D.IgnoreLayerCollision(0, 10, true);
+            Physics2D.IgnoreLayerCollision(11, 10, true);//TODO: Get layer by name
         }
         
         if (currentDashTime >= 0)
@@ -105,7 +105,7 @@ public class PlayerMovementController : MonoBehaviour {
         {
             rigidbody.velocity = Vector3.zero;
             isDashing = false;
-            Physics2D.IgnoreLayerCollision(0, 10, false);
+            Physics2D.IgnoreLayerCollision(11, 10, false);//TODO: Get layer by name
         }
     }
     

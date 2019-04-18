@@ -10,6 +10,7 @@ public class GameLoopManager : MonoBehaviour {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject gameOverMenu;
     [SerializeField] GameObject missionCompleteMenu;
+    [SerializeField] GameObject dialogueBox;
 
     private Scene currentScene;
 
@@ -46,6 +47,8 @@ public class GameLoopManager : MonoBehaviour {
         } else if (Input.GetKeyDown(KeyCode.P)) {
             PauseGame();
         }
+
+        //UpdateDialogueText();
     }
 
     void ShowGameOverMenu() {
@@ -68,7 +71,7 @@ public class GameLoopManager : MonoBehaviour {
             Time.timeScale = 0;
         }
     }
-    
+        
     public void PauseGame() {
         ShowPauseGame();
     }
@@ -76,5 +79,24 @@ public class GameLoopManager : MonoBehaviour {
     public void GameOver()
     {
         ShowGameOverMenu();
+    }
+    
+    public void UpdateDialogueText(string[] t)
+    {
+        if (!dialogueBox.activeSelf)
+        {
+            dialogueBox.SetActive(true);
+            Time.timeScale = 0;
+            dialogueBox.GetComponent<DialogueBoxController>().Init(t);
+        }
+    }
+    
+    public void DisableDialogueText()
+    {
+        if (dialogueBox.activeSelf)
+        {
+            dialogueBox.SetActive(false);
+            Time.timeScale = 1;;
+        }
     }
 }
