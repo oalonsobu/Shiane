@@ -52,7 +52,17 @@ public class PlayerMovementController : MonoBehaviour {
     void UpdateGrounded()
     {
         //TODO: maybe two raycast, one in each side of the sprite...
-        RaycastHit2D hit = Physics2D.Raycast(collider.transform.position, Vector2.down, colliderSizeRaycast, groundLayer | enemyLayer);
+        Vector3 pos = collider.transform.position;
+        pos.x += collider.size.x / 2;
+        RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.down, colliderSizeRaycast, groundLayer | enemyLayer);
+        
+        if (hit.collider == null)
+        {
+            //If there is no collision in that place we calculate the other one (maybe we are missing some collisions, be I think is not that important
+            pos.x -= collider.size.x;
+            hit = Physics2D.Raycast(pos, Vector2.down, colliderSizeRaycast, groundLayer | enemyLayer);
+        }
+        
         if (hit.collider != null && (1 << hit.collider.gameObject.layer) == enemyLayer)
         {
             //TODO: jumping over it will kill the enemy ??
