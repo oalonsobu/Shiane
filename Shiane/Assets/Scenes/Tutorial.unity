@@ -844,6 +844,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &306334247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 306334248}
+  - component: {fileID: 306334249}
+  m_Layer: 0
+  m_Name: enemy (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &306334248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306334247}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.46, y: -0.059999943, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2009137872}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &306334249
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306334247}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 03fb0aa146f25e84d968d37c7ace5982, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.8857143, y: 0.9}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &321683106 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 628480036011917828, guid: 07c0eb398b6cd4b46a1376bc77efb5ee,
@@ -21474,12 +21553,170 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0.9, y: 2.48, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &561509872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 561509873}
+  - component: {fileID: 561509874}
+  m_Layer: 0
+  m_Name: enemy (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &561509873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561509872}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.09, y: -0.059999943, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2009137872}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &561509874
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561509872}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 03fb0aa146f25e84d968d37c7ace5982, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.8857143, y: 0.9}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &877976504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 877976505}
+  - component: {fileID: 877976506}
+  m_Layer: 0
+  m_Name: enemy (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &877976505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877976504}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.04, y: -0.059999943, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2009137872}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &877976506
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877976504}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 03fb0aa146f25e84d968d37c7ace5982, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.8857143, y: 0.9}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &917821702
 GameObject:
   m_ObjectHideFlags: 0
@@ -21582,6 +21819,85 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &964806639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 964806640}
+  - component: {fileID: 964806641}
+  m_Layer: 0
+  m_Name: enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &964806640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964806639}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.73, y: -0.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2009137872}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &964806641
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964806639}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 03fb0aa146f25e84d968d37c7ace5982, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.8857143, y: 0.9}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1158288821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21849,6 +22165,650 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1237435283865414, guid: b39ead24af28f994a8e76717a31409cf,
     type: 3}
   m_PrefabInstance: {fileID: 1192681902}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1230374341
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 594411326034309712, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: m_Name
+      value: DialoguePoint3
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309719, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 124.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309719, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309719, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.012264
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309719, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309719, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309719, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309719, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309719, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309719, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309719, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309719, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[0]
+      value: Has llegado muy lejos, pero vas a morir. Estas rodeado y Kaze ha retirado
+        su poder de ti.
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[3]
+      value: Muereeeeee!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[4]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[5]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[6]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[7]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[8]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[9]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[10]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[11]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[12]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[13]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[14]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[15]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[16]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[17]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[18]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[19]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[20]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[21]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[22]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[23]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[24]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[25]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[26]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[27]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[28]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[29]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[30]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[31]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[32]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[33]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[34]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[35]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[36]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[37]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[38]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[39]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[40]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[41]
+      value: "\xBFNo te parece suficente esta prueba? No te preocupes, la buena a\xFAn
+        est\xE1 por llegar..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[42]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[43]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[44]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[45]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[46]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[47]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[48]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[49]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[50]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[51]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[52]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[53]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[54]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[55]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[56]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[57]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[58]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[59]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[60]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[61]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[62]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[63]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[64]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[65]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[66]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[67]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[68]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[69]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[70]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[71]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[72]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[73]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[74]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[75]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[76]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[77]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[78]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[79]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[80]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[81]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[82]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[83]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[84]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[85]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[86]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[87]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[88]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[89]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[90]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[91]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[92]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[93]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[94]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[95]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[96]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[97]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[98]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[99]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[100]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[101]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[102]
+      value: Pues hemos llegado hasta aqui sin fallos.... Y ahora que?
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[1]
+      value: Adios tyson...
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: text.Array.data[2]
+      value: Alli esta!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: cutSceneGO
+      value: 
+      objectReference: {fileID: 2009137874}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: playableIndex
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66e79c747e476ea4bb060678f8a5a4be, type: 3}
+--- !u!1 &1297331285 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 630309028953083232, guid: 07c0eb398b6cd4b46a1376bc77efb5ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 1717396350}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1407981360
 PrefabInstance:
@@ -22466,6 +23426,170 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zDistance: 10
   offsetX: 2
+--- !u!4 &1411032760 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7311453468151741602, guid: cb1ed6ae29e86cc43a518244b4af6366,
+    type: 3}
+  m_PrefabInstance: {fileID: 7311453468065974930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1510039664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1510039665}
+  - component: {fileID: 1510039666}
+  m_Layer: 0
+  m_Name: enemy (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1510039665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510039664}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.59, y: -0.059999943, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2009137872}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1510039666
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510039664}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 03fb0aa146f25e84d968d37c7ace5982, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.8857143, y: 0.9}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1546554871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1546554872}
+  - component: {fileID: 1546554873}
+  m_Layer: 0
+  m_Name: enemy (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1546554872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546554871}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.45, y: -0.059999943, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2009137872}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1546554873
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546554871}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 03fb0aa146f25e84d968d37c7ace5982, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.8857143, y: 0.9}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1001 &1717396350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22477,6 +23601,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DialogueBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 628480036011917828, guid: 07c0eb398b6cd4b46a1376bc77efb5ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 837940195719216616, guid: 07c0eb398b6cd4b46a1376bc77efb5ee,
         type: 3}
@@ -22583,6 +23712,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 661449789121235446, guid: 07c0eb398b6cd4b46a1376bc77efb5ee,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751206284069312973, guid: 07c0eb398b6cd4b46a1376bc77efb5ee,
+        type: 3}
+      propertyPath: buttonGameObject
+      value: 
+      objectReference: {fileID: 1297331285}
+    - target: {fileID: 628846086909919883, guid: 07c0eb398b6cd4b46a1376bc77efb5ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 661193554550589774, guid: 07c0eb398b6cd4b46a1376bc77efb5ee,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07c0eb398b6cd4b46a1376bc77efb5ee, type: 3}
 --- !u!1 &1805636993
@@ -22632,6 +23781,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2009137871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2009137872}
+  - component: {fileID: 2009137874}
+  - component: {fileID: 2009137873}
+  m_Layer: 0
+  m_Name: TutorialCutSceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2009137872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009137871}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 964806640}
+  - {fileID: 306334248}
+  - {fileID: 1546554872}
+  - {fileID: 877976505}
+  - {fileID: 561509873}
+  - {fileID: 1510039665}
+  m_Father: {fileID: 1411032760}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2009137873
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009137871}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!320 &2009137874
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009137871}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 2db2c8c576f5e37478b9af3444cd97a5, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 2
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114695277657644592, guid: 2db2c8c576f5e37478b9af3444cd97a5, type: 2}
+    value: {fileID: 2009137873}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1001 &594411325464094874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23336,12 +24561,12 @@ PrefabInstance:
     - target: {fileID: 7311453468151741602, guid: cb1ed6ae29e86cc43a518244b4af6366,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.46
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7311453468151741602, guid: cb1ed6ae29e86cc43a518244b4af6366,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.49
+      value: 2.48
       objectReference: {fileID: 0}
     - target: {fileID: 7311453468151741602, guid: cb1ed6ae29e86cc43a518244b4af6366,
         type: 3}

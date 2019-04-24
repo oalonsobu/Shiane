@@ -1,17 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class DialoguePointController : MonoBehaviour
 {
     [SerializeField]
     string[] text;
 
+    [SerializeField]
+    PlayableDirector cutSceneGO;
+    [SerializeField][Tooltip("When the cutScene will play")]
+    int playableIndex; 
+
     bool pointReached = false;
     
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (pointReached && text.Length != 0)
+        if (pointReached || text.Length == 0)
         {
             return;
         }
@@ -19,7 +25,7 @@ public class DialoguePointController : MonoBehaviour
         pointReached = true;
         if (col.gameObject.layer == 11) //TODO: Get layer by name
         {
-            GameLoopManager.instance.UpdateDialogueText(text);
+            GameLoopManager.instance.InitializeDialogueText(text, cutSceneGO, playableIndex);
         }
     }
 }

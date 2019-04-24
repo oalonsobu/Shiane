@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class GameLoopManager : MonoBehaviour {
@@ -47,8 +48,6 @@ public class GameLoopManager : MonoBehaviour {
         } else if (Input.GetKeyDown(KeyCode.P)) {
             PauseGame();
         }
-
-        //UpdateDialogueText();
     }
 
     void ShowGameOverMenu() {
@@ -81,13 +80,13 @@ public class GameLoopManager : MonoBehaviour {
         ShowGameOverMenu();
     }
     
-    public void UpdateDialogueText(string[] t)
+    public void InitializeDialogueText(string[] t, PlayableDirector p, int pi)
     {
         if (!dialogueBox.activeSelf)
         {
             dialogueBox.SetActive(true);
             Time.timeScale = 0;
-            dialogueBox.GetComponent<DialogueBoxController>().Init(t);
+            dialogueBox.GetComponent<DialogueBoxController>().Init(t, p, pi);
         }
     }
     
