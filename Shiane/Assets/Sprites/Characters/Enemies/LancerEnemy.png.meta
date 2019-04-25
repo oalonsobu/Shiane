@@ -18,6 +18,7 @@ TextureImporter:
     21300026: LancerEnemy_13
     21300028: LancerEnemy_14
     21300030: LancerEnemy_15
+    21300032: LancerEnemy_16
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -114,7 +115,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25263c77fbd94b74886fd366afc0fde6
+      spriteID: d55e25d6b4391084c8fc87b8c2cb3aa3
       vertices: []
       indices: 
       edges: []
@@ -134,7 +135,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0bfb0e3a1bf1e94d939291f4f67d08a
+      spriteID: 2d667669093c3144aa980173fcd107f4
       vertices: []
       indices: 
       edges: []
@@ -154,7 +155,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3a210460ddddab4e88af3ebe3bca531
+      spriteID: bc08bc180c58a8f43b35a40153b70595
       vertices: []
       indices: 
       edges: []
@@ -165,7 +166,7 @@ TextureImporter:
         serializedVersion: 2
         x: 193
         y: 65
-        width: 51
+        width: 50
         height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -174,7 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f4de7d732db69140acf84c3578d8ff3
+      spriteID: 45e036c69fd7bf04bbc954d5deb0745c
       vertices: []
       indices: 
       edges: []
@@ -183,9 +184,9 @@ TextureImporter:
       name: LancerEnemy_4
       rect:
         serializedVersion: 2
-        x: 249
+        x: 245
         y: 64
-        width: 123
+        width: 58
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,13 +195,33 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6848b712c46295745a5c6265239af03f
+      spriteID: ff9180ef5a13e65439d384ce5365b6d2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: LancerEnemy_5
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 64
+        width: 65
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cf6f016d6faa9428546405d6f5a5dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LancerEnemy_6
       rect:
         serializedVersion: 2
         x: 375
@@ -214,13 +235,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d018178b35878b048b839c0e863f35c6
+      spriteID: 41c67f058263df64f998d320b712b963
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LancerEnemy_6
+      name: LancerEnemy_7
       rect:
         serializedVersion: 2
         x: 447
@@ -234,13 +255,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4804f4a302cd3a844b41302f73c8e72e
+      spriteID: 2e0494b2ee6925e4fa6a197b29e5af1b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LancerEnemy_7
+      name: LancerEnemy_8
       rect:
         serializedVersion: 2
         x: 517
@@ -254,13 +275,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48979ba001d9b1a44b677779bf976c87
+      spriteID: 7c45e11d7913b9e4bb40c0096a057e33
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LancerEnemy_8
+      name: LancerEnemy_9
       rect:
         serializedVersion: 2
         x: 4
@@ -274,13 +295,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37cf82f858fc8b942b2d554f6f0ca19b
+      spriteID: d3688351455411f4a8128446fa25828f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LancerEnemy_9
+      name: LancerEnemy_10
       rect:
         serializedVersion: 2
         x: 71
@@ -294,13 +315,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70ad17cdf5feafc46ad546e4730d24f3
+      spriteID: 2d2bb8c4738992046af9815bcb6b0b97
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LancerEnemy_10
+      name: LancerEnemy_11
       rect:
         serializedVersion: 2
         x: 135
@@ -314,13 +335,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffb3f30118c594e4b8427c31451c2baf
+      spriteID: e450971914b8ffd499dc8a0ea2522c60
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LancerEnemy_11
+      name: LancerEnemy_12
       rect:
         serializedVersion: 2
         x: 202
@@ -334,13 +355,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be8d29c80e0129e4c9f287a333438cf5
+      spriteID: 1e02a72f1f9844d468b81d766c6c4c24
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LancerEnemy_12
+      name: LancerEnemy_13
       rect:
         serializedVersion: 2
         x: 260
@@ -354,13 +375,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f06d01a4fae74c64ead079fdca079bdf
+      spriteID: f210fe3c9516ff246818bdc51bfdb78a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LancerEnemy_13
+      name: LancerEnemy_14
       rect:
         serializedVersion: 2
         x: 321
@@ -374,13 +395,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 636ef7f0021c0e84faa8b5faa450c255
+      spriteID: 81330376a3f6f9f428af405531645526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LancerEnemy_14
+      name: LancerEnemy_15
       rect:
         serializedVersion: 2
         x: 388
@@ -394,13 +415,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb0b14251aa98c54dad2c2c1efeb6926
+      spriteID: 03c69adf3c91dad44a8f122e578859d4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LancerEnemy_15
+      name: LancerEnemy_16
       rect:
         serializedVersion: 2
         x: 458
@@ -414,7 +435,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c6c04cb0f985bd428ed44ad9ca94883
+      spriteID: 652ea5ebb57f7b54aaa9b05a8ceb4c47
       vertices: []
       indices: 
       edges: []
@@ -422,7 +443,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b3ae91fc5d337d44283c134b2c7dd416
+    spriteID: b7bdc382128e8724ea22d7dddfd7c70d
     vertices: []
     indices: 
     edges: []
