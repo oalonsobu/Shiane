@@ -40,14 +40,11 @@ public class GameLoopManager : MonoBehaviour {
             //The game is over. Do not update
             return; 
         }
-
-        if (Input.GetKeyDown(KeyCode.L) && !pauseMenu.activeSelf) {
-            ShowGameOverMenu();
-        } else if (Input.GetKeyDown(KeyCode.O) && !pauseMenu.activeSelf) {
-            ShowMissionCompleteMenu();
-        } else if (Input.GetKeyDown(KeyCode.P)) {
+        
+        if (Input.GetKeyDown(KeyCode.P)) {
             PauseGame();
         }
+        
     }
 
     void ShowGameOverMenu() {
@@ -78,6 +75,11 @@ public class GameLoopManager : MonoBehaviour {
     public void GameOver()
     {
         ShowGameOverMenu();
+    }
+    
+    public void EndGame()
+    {
+        ShowMissionCompleteMenu();
     }
     
     public void InitializeDialogueText(string[] t, PlayableDirector[] p, int[] pi)

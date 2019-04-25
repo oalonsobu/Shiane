@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
     <Compile Include="Assets\Scripts\GameControllers\CameraController.cs" />
     <Compile Include="Assets\Scripts\GameControllers\DialoguePointController.cs" />
+    <Compile Include="Assets\Scripts\GameControllers\EndPointController.cs" />
     <Compile Include="Assets\Scripts\GameControllers\GameLoopManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovementController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

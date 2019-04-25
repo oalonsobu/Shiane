@@ -22,6 +22,7 @@
           <e p="GameControllers" t="Include">
             <e p="CameraController.cs" t="Include" />
             <e p="DialoguePointController.cs" t="Include" />
+            <e p="EndPointController.cs" t="Include" />
             <e p="GameLoopManager.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
