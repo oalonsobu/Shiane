@@ -80,7 +80,7 @@ public class GameLoopManager : MonoBehaviour {
         ShowGameOverMenu();
     }
     
-    public void InitializeDialogueText(string[] t, PlayableDirector p, int pi)
+    public void InitializeDialogueText(string[] t, PlayableDirector[] p, int[] pi)
     {
         if (!dialogueBox.activeSelf)
         {

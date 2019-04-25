@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UI;
@@ -14,16 +16,16 @@ public class DialogueBoxController : MonoBehaviour {
     string currentText;
     int textPointer = 0;
     int charPointer = 0;
-    PlayableDirector playableDirector;
-    int playableIndex;
+    PlayableDirector[] playableDirector;
+    int[] playableIndex;
     
-    public void Init(string[] t, PlayableDirector p, int pi)
+    public void Init(string[] t, PlayableDirector[] p, int[] pi)
     {
-        textPointer = -1;
-        currentText = "";
         text = t;
         playableDirector = p;
-        playableIndex = p ? pi : -1;
+        playableIndex = p.Length > 0 ? pi : null;
+        textPointer = 0;
+        currentText = "";
         Next();
     }
     
@@ -33,20 +35,13 @@ public class DialogueBoxController : MonoBehaviour {
         {
             SetCompleteText();
         }
-        else if (textPointer < text.Length - 1)
+        else if (playableIndex.Contains(textPointer))
         {
-            textGameObject.GetComponent<Text>().text = "";
-            textPointer++;
-            currentText = text[textPointer];
-            charPointer = 0;
-            if (textPointer == playableIndex)
-            {
-                StartCoroutine(StartAnimation());
-            }
-            else
-            {
-                StartCoroutine(UpdateText());
-            } 
+            StartCoroutine(StartAnimation());
+        }
+        else if (textPointer < text.Length)
+        {
+            StartCoroutine(UpdateText());
         }
         else
         {
@@ -62,6 +57,10 @@ public class DialogueBoxController : MonoBehaviour {
    
     IEnumerator UpdateText()
     {   
+        currentText = text[textPointer];
+        charPointer = 0;
+        textPointer++;
+        textGameObject.GetComponent<Text>().text = "";
         while (true)
         {
             yield return new WaitForSecondsRealtime (0.1f);
@@ -76,17 +75,20 @@ public class DialogueBoxController : MonoBehaviour {
     
     IEnumerator StartAnimation()
     {
+        int currentIndex = Array.IndexOf(playableIndex, textPointer);
         buttonGameObject.GetComponent<Button>().interactable = false;
-        playableDirector.Play();
+        playableDirector[currentIndex].Play();
         while (true)
         {
             yield return new WaitForSecondsRealtime (0.1f);
-            if (playableDirector.state != UnityEngine.Playables.PlayState.Playing)
+            if (playableDirector[currentIndex].state != UnityEngine.Playables.PlayState.Playing)
             {
                 break;
             }
         }
+        playableIndex[currentIndex] = -1;
         buttonGameObject.GetComponent<Button>().interactable = true;
-        StartCoroutine(UpdateText());
+        Next();
+        
     }
 }

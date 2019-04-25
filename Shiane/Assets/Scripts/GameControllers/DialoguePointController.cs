@@ -9,14 +9,15 @@ public class DialoguePointController : MonoBehaviour
     string[] text;
 
     [SerializeField]
-    PlayableDirector cutSceneGO;
+    PlayableDirector[] cutSceneGO;
     [SerializeField][Tooltip("When the cutScene will play")]
-    int playableIndex; 
+    int[] playableIndex; 
 
     bool pointReached = false;
     
     void OnTriggerEnter2D(Collider2D col)
     {
+        //TODO: check integrity between cutSceneGO and playableIndex
         if (pointReached || text.Length == 0)
         {
             return;
