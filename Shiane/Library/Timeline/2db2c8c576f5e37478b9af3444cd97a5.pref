@@ -19,7 +19,7 @@ MonoBehaviour:
   trackScale: 1
   playRangeEnabled: 0
   timeAreaPlayRange: {x: 0.31458333, y: 2.2020833}
-  windowTime: 6.999999999999
+  windowTime: 0
   verticalScroll: 7
   m_Keys:
   - {fileID: 114967781650167960, guid: 2db2c8c576f5e37478b9af3444cd97a5, type: 2}

@@ -136,7 +136,7 @@ MonoBehaviour:
   playerSpeed: 5
   dashVelocity: 20
   movementSmoothing: 0.3
-  jumpForce: 400
+  jumpForce: 200
   groundLayer:
     serializedVersion: 2
     m_Bits: 512

@@ -21,17 +21,21 @@ public class PlayerMovementController : MonoBehaviour {
     bool canDash = false;
     bool dashReleased = true;
     bool isDashing = false;
-    Rigidbody2D rigidbody;
-    CapsuleCollider2D collider;
-    bool isFacingRight = true;
     bool grounded = true;
     float colliderSizeRaycast = 0;
+    
+    //Unity components
+    Rigidbody2D rigidbody;
+    CapsuleCollider2D collider;
+    SpriteRenderer spriteRenderer;
 
     void Start ()
     {
         currentVelocity = Vector2.zero;
-        rigidbody = gameObject.GetComponent<Rigidbody2D>();
-        collider  = gameObject.GetComponent<CapsuleCollider2D>();
+        rigidbody       = gameObject.GetComponent<Rigidbody2D>();
+        collider        = gameObject.GetComponent<CapsuleCollider2D>();
+        spriteRenderer  = gameObject.GetComponent<SpriteRenderer>();
+        
         colliderSizeRaycast = 3 * collider.size.y / 4;
     }
 
@@ -42,11 +46,8 @@ public class PlayerMovementController : MonoBehaviour {
         Jump();
         Move();
         CheckForEnemies();
-        dashReleased = dashReleased || Input.GetAxis("Dash") <= 0; //To avoid continuously dashing;
-        if (rigidbody.position.y < -2)
-        {
-            KillPlayer();
-        }
+        CheckFallDeath();
+        FlipSprite();
     }
 
     void UpdateGrounded()
@@ -117,6 +118,7 @@ public class PlayerMovementController : MonoBehaviour {
             isDashing = false;
             Physics2D.IgnoreLayerCollision(11, 10, false);//TODO: Get layer by name
         }
+        dashReleased = dashReleased || Input.GetAxis("Dash") <= 0; //To avoid continuously dashing;
     }
     
     void Move()
@@ -146,4 +148,20 @@ public class PlayerMovementController : MonoBehaviour {
         GameLoopManager.instance.GameOver();
     }
 
+    void CheckFallDeath()
+    {
+        if (rigidbody.position.y < -2)
+        {
+            KillPlayer();
+        }
+    }
+    
+    void FlipSprite()
+    {
+        bool isFacingRight  = Input.GetAxis("Horizontal") > 0;
+        bool isFacingLeft   = Input.GetAxis("Horizontal") < 0;
+        bool wasFacingRight = spriteRenderer.flipX;
+
+        spriteRenderer.flipX = (!isFacingLeft && wasFacingRight) || isFacingRight;
+    }
 }
