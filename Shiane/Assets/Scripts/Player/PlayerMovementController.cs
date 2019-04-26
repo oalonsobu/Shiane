@@ -28,6 +28,7 @@ public class PlayerMovementController : MonoBehaviour {
     Rigidbody2D rigidbody;
     CapsuleCollider2D collider;
     SpriteRenderer spriteRenderer;
+    Animator animator;
 
     void Start ()
     {
@@ -35,6 +36,7 @@ public class PlayerMovementController : MonoBehaviour {
         rigidbody       = gameObject.GetComponent<Rigidbody2D>();
         collider        = gameObject.GetComponent<CapsuleCollider2D>();
         spriteRenderer  = gameObject.GetComponent<SpriteRenderer>();
+        animator        = gameObject.GetComponent<Animator>();
         
         colliderSizeRaycast = 3 * collider.size.y / 4;
     }
@@ -80,6 +82,9 @@ public class PlayerMovementController : MonoBehaviour {
         {
             grounded = false;
         }
+        
+        animator.SetBool("Grounded", grounded);
+        animator.SetFloat("YVelocity", rigidbody.velocity.y);
     }
 
     void Jump()
@@ -128,6 +133,7 @@ public class PlayerMovementController : MonoBehaviour {
             float movementForce = Input.GetAxis("Horizontal");
             Vector2 desiredVelocity = Vector2.right * movementForce * playerSpeed;
             rigidbody.velocity = Vector3.SmoothDamp(rigidbody.velocity, desiredVelocity, ref currentVelocity, movementSmoothing);
+            animator.SetBool("IsWalking", Math.Abs(rigidbody.velocity.x) > 0.1f);
         }
     }
 
