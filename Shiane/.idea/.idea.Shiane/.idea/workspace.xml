@@ -6,16 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3b95cf26-3b12-4dbf-836c-9fa5222d58a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Shiane/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shiane/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/TutorialCutSceneManagerTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/TutorialCutSceneManagerTimeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tutorial.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/70d66e-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/70d66e-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/e9213d-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/e9213d-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Timeline/2db2c8c576f5e37478b9af3444cd97a5.pref" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Timeline/2db2c8c576f5e37478b9af3444cd97a5.pref" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/18/180c9b86c7ab37d4dad44e9968385dbb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/18/180c9b86c7ab37d4dad44e9968385dbb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/18/180c9b86c7ab37d4dad44e9968385dbb.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/18/180c9b86c7ab37d4dad44e9968385dbb.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -369,12 +359,12 @@
       <workItem from="1556145023694" duration="55000" />
       <workItem from="1556216166742" duration="3368000" />
       <workItem from="1556223311735" duration="1515000" />
-      <workItem from="1556230131084" duration="294000" />
+      <workItem from="1556230131084" duration="1541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64566000" />
+    <option name="totallyTimeSpent" value="65813000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
