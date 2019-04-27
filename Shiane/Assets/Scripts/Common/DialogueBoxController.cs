@@ -23,7 +23,7 @@ public class DialogueBoxController : MonoBehaviour {
     {
         text = t;
         playableDirector = p;
-        playableIndex = p.Length > 0 ? pi : null;
+        playableIndex = pi;
         textPointer = 0;
         currentText = "";
         Next();
@@ -35,7 +35,7 @@ public class DialogueBoxController : MonoBehaviour {
         {
             SetCompleteText();
         }
-        else if (playableIndex.Contains(textPointer))
+        else if (playableIndex.Length > 0 && playableIndex.Contains(textPointer))
         {
             StartCoroutine(StartAnimation());
         }

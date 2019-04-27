@@ -54,7 +54,7 @@ public class GameLoopManager : MonoBehaviour {
 
     void ShowMissionCompleteMenu() {
         missionCompleteMenu.SetActive(true);
-        missionCompleteMenu.GetComponent<MissionCompleteMenuController>().setText(0,1);
+        missionCompleteMenu.GetComponent<MissionCompleteMenuController>().setText(0,0);
         Time.timeScale = 0;
     }
 
