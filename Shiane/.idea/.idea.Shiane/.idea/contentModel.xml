@@ -24,6 +24,7 @@
             <e p="DialoguePointController.cs" t="Include" />
             <e p="EndPointController.cs" t="Include" />
             <e p="GameLoopManager.cs" t="Include" />
+            <e p="ParallaxController.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="PlayerMovementController.cs" t="Include" />
