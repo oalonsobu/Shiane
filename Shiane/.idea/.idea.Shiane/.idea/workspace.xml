@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b95cf26-3b12-4dbf-836c-9fa5222d58a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Shiane/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shiane/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Shiane/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shiane/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tutorial.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Painted HQ 2D Forest Medieval Background/day/mountain01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Painted HQ 2D Forest Medieval Background/day/mountain01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Painted HQ 2D Forest Medieval Background/day/mountain02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Painted HQ 2D Forest Medieval Background/day/mountain02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameControllers/ParallaxController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameControllers/ParallaxController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/70d66e-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/70d66e-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/e9213d-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/e9213d-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/63/63bd50a6c3fd26b439c10e599e94b853" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/63/63bd50a6c3fd26b439c10e599e94b853" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/bb/bba7642834be53847bc612fd5a6d91fa" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/bb/bba7642834be53847bc612fd5a6d91fa" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/bf/bf66f81ff5312b0468db46a55bc8b271" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/bf/bf66f81ff5312b0468db46a55bc8b271" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,21 +98,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameControllers/ParallaxController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
+            <state relative-caret-position="120">
+              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
               <folding>
-                <marker date="1557050620278" expanded="false" signature="6:78" ph="..." />
-                <marker date="1557050620278" expanded="true" signature="127:2638" ph="{...}" />
-                <marker date="1557050620278" expanded="true" signature="381:519" ph="{...}" />
-                <marker date="1557050620278" expanded="true" signature="577:736" ph="{...}" />
-                <marker date="1557050620278" expanded="true" signature="788:1050" ph="{...}" />
-                <marker date="1557050620278" expanded="true" signature="1107:1369" ph="{...}" />
-                <marker date="1557050620278" expanded="true" signature="1407:1787" ph="{...}" />
-                <marker date="1557050620278" expanded="true" signature="1491:1781" ph="{...}" />
-                <marker date="1557050620278" expanded="true" signature="1840:2636" ph="{...}" />
-                <marker date="1557050620278" expanded="true" signature="2000:2630" ph="{...}" />
-                <marker date="1557050620278" expanded="true" signature="2306:2377" ph="{...}" />
-                <marker date="1557050620278" expanded="true" signature="2459:2530" ph="{...}" />
+                <marker date="1557051921956" expanded="false" signature="6:78" ph="..." />
+                <marker date="1557051921956" expanded="true" signature="127:2778" ph="{...}" />
+                <marker date="1557051921956" expanded="true" signature="447:585" ph="{...}" />
+                <marker date="1557051921956" expanded="true" signature="643:827" ph="{...}" />
+                <marker date="1557051921956" expanded="true" signature="879:1131" ph="{...}" />
+                <marker date="1557051921956" expanded="true" signature="1188:1441" ph="{...}" />
+                <marker date="1557051921956" expanded="true" signature="1479:1927" ph="{...}" />
+                <marker date="1557051921956" expanded="true" signature="1648:1921" ph="{...}" />
+                <marker date="1557051921956" expanded="true" signature="1980:2776" ph="{...}" />
+                <marker date="1557051921956" expanded="true" signature="2140:2770" ph="{...}" />
+                <marker date="1557051921956" expanded="true" signature="2446:2517" ph="{...}" />
+                <marker date="1557051921956" expanded="true" signature="2599:2670" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -404,12 +402,12 @@
       <workItem from="1556223311735" duration="1515000" />
       <workItem from="1556230131084" duration="9861000" />
       <workItem from="1556969392252" duration="671000" />
-      <workItem from="1556979588610" duration="11194000" />
+      <workItem from="1556979588610" duration="12125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85998000" />
+    <option name="totallyTimeSpent" value="86929000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,6 +420,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2185501" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -681,21 +680,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameControllers/ParallaxController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
+        <state relative-caret-position="120">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
           <folding>
-            <marker date="1557050620278" expanded="false" signature="6:78" ph="..." />
-            <marker date="1557050620278" expanded="true" signature="127:2638" ph="{...}" />
-            <marker date="1557050620278" expanded="true" signature="381:519" ph="{...}" />
-            <marker date="1557050620278" expanded="true" signature="577:736" ph="{...}" />
-            <marker date="1557050620278" expanded="true" signature="788:1050" ph="{...}" />
-            <marker date="1557050620278" expanded="true" signature="1107:1369" ph="{...}" />
-            <marker date="1557050620278" expanded="true" signature="1407:1787" ph="{...}" />
-            <marker date="1557050620278" expanded="true" signature="1491:1781" ph="{...}" />
-            <marker date="1557050620278" expanded="true" signature="1840:2636" ph="{...}" />
-            <marker date="1557050620278" expanded="true" signature="2000:2630" ph="{...}" />
-            <marker date="1557050620278" expanded="true" signature="2306:2377" ph="{...}" />
-            <marker date="1557050620278" expanded="true" signature="2459:2530" ph="{...}" />
+            <marker date="1557051921956" expanded="false" signature="6:78" ph="..." />
+            <marker date="1557051921956" expanded="true" signature="127:2778" ph="{...}" />
+            <marker date="1557051921956" expanded="true" signature="447:585" ph="{...}" />
+            <marker date="1557051921956" expanded="true" signature="643:827" ph="{...}" />
+            <marker date="1557051921956" expanded="true" signature="879:1131" ph="{...}" />
+            <marker date="1557051921956" expanded="true" signature="1188:1441" ph="{...}" />
+            <marker date="1557051921956" expanded="true" signature="1479:1927" ph="{...}" />
+            <marker date="1557051921956" expanded="true" signature="1648:1921" ph="{...}" />
+            <marker date="1557051921956" expanded="true" signature="1980:2776" ph="{...}" />
+            <marker date="1557051921956" expanded="true" signature="2140:2770" ph="{...}" />
+            <marker date="1557051921956" expanded="true" signature="2446:2517" ph="{...}" />
+            <marker date="1557051921956" expanded="true" signature="2599:2670" ph="{...}" />
           </folding>
         </state>
       </provider>

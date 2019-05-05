@@ -9,6 +9,8 @@ public class ParallaxController : MonoBehaviour
     [SerializeField] GameObject backLayer;
     [SerializeField] GameObject frontLayer;
     Vector3 mainCameraLastPosition;
+    float frontLayerSpeed = 3.5f;
+    float backLayerSpeed  = 2f;
     
     // Start is called before the first frame update
     void Start()
@@ -21,15 +23,15 @@ public class ParallaxController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateLayer(backLayer, 1f);
-        UpdateLayer(frontLayer, 2f);
+        UpdateLayer(backLayer, backLayerSpeed);
+        UpdateLayer(frontLayer, frontLayerSpeed);
         
         mainCameraLastPosition = Camera.main.transform.position;
     }
 
     bool IsInLeftSideScreen(float pos, float size)
     {
-        //Get the most left and right point in the screen
+        //Get the most left point in the screen
         float screenRatio = Camera.main.orthographicSize * Screen.width / Screen.height;
         float minX = Camera.main.transform.position.x - screenRatio;
         return minX > pos + size;
@@ -37,7 +39,7 @@ public class ParallaxController : MonoBehaviour
     
     bool IsInRightSideScreen(float pos, float size)
     {
-        //Get the most left and right point in the screen
+        //Get the most right point in the screen
         float screenRatio = Camera.main.orthographicSize * Screen.width / Screen.height;
         float maxX = Camera.main.transform.position.x + screenRatio;
         return maxX < pos - size;
@@ -45,12 +47,13 @@ public class ParallaxController : MonoBehaviour
 
     void InitLayer(GameObject layer)
     {
+        float yPosition = layer.transform.position.y - Camera.main.orthographicSize;
         int counter = 0;
         foreach (Transform child in layer.transform)
         {
             float extents = child.GetComponent<SpriteRenderer>().bounds.extents.x;
             float currentPos = 2 * extents * counter;
-            child.position = new Vector3(currentPos, layer.transform.position.y, layer.transform.position.z);
+            child.position = new Vector3(currentPos, yPosition, layer.transform.position.z);
             counter++;
         }
     }
