@@ -149,7 +149,7 @@ public class PlayerMovementController : MonoBehaviour {
         }
     }
 
-    void KillPlayer()
+    public void KillPlayer()
     {
         GameLoopManager.instance.GameOver();
     }

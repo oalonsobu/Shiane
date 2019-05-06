@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Common\AudioHelper.cs" />
     <Compile Include="Assets\Scripts\Common\CreditsController.cs" />
+    <Compile Include="Assets\Scripts\Common\DeadlyObject.cs" />
     <Compile Include="Assets\Scripts\Common\DialogueBoxController.cs" />
     <Compile Include="Assets\Scripts\Common\GameOverMenuController.cs" />
     <Compile Include="Assets\Scripts\Common\MainMenuController.cs" />

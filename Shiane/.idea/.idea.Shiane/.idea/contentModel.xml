@@ -10,6 +10,7 @@
           <e p="Common" t="Include">
             <e p="AudioHelper.cs" t="Include" />
             <e p="CreditsController.cs" t="Include" />
+            <e p="DeadlyObject.cs" t="Include" />
             <e p="DialogueBoxController.cs" t="Include" />
             <e p="GameOverMenuController.cs" t="Include" />
             <e p="MainMenuController.cs" t="Include" />
