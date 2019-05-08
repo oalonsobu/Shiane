@@ -59,13 +59,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Common\AudioHelper.cs" />
     <Compile Include="Assets\Scripts\Common\CreditsController.cs" />
-    <Compile Include="Assets\Scripts\Common\DeadlyObject.cs" />
     <Compile Include="Assets\Scripts\Common\DialogueBoxController.cs" />
     <Compile Include="Assets\Scripts\Common\GameOverMenuController.cs" />
     <Compile Include="Assets\Scripts\Common\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\Common\MenuPauseController.cs" />
     <Compile Include="Assets\Scripts\Common\MissionCompleteMenuController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\DeadlyObject.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\MovingObject.cs" />
     <Compile Include="Assets\Scripts\GameControllers\CameraController.cs" />
     <Compile Include="Assets\Scripts\GameControllers\DialoguePointController.cs" />
     <Compile Include="Assets\Scripts\GameControllers\EndPointController.cs" />
