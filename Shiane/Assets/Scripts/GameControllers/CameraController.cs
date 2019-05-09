@@ -15,6 +15,7 @@ public class CameraController : MonoBehaviour {
     {
         cam = Camera.main; 
     }
+    
     //Need to be in the same update as character movement ;)
     void FixedUpdate ()
     {

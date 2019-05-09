@@ -30,7 +30,7 @@ public class MovingObject : MonoBehaviour
     void Move()
     {
         transform.position = Vector3.SmoothDamp(transform.position, positions[current].position, ref currentVelocity, 0.1f, speed);
-    }
+    }    
     
     IEnumerator RestartMovement()
     {

@@ -65,7 +65,8 @@
     <Compile Include="Assets\Scripts\Common\MenuPauseController.cs" />
     <Compile Include="Assets\Scripts\Common\MissionCompleteMenuController.cs" />
     <Compile Include="Assets\Scripts\Enemy\DeadlyObject.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyHealthController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyMovementController.cs" />
     <Compile Include="Assets\Scripts\Enemy\MovingObject.cs" />
     <Compile Include="Assets\Scripts\GameControllers\CameraController.cs" />
     <Compile Include="Assets\Scripts\GameControllers\DialoguePointController.cs" />

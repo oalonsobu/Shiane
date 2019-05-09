@@ -69,7 +69,7 @@ public class PlayerMovementController : MonoBehaviour {
         if (hit.collider != null && (1 << hit.collider.gameObject.layer) == enemyLayer)
         {
             //TODO: jumping over it will kill the enemy ??
-            hit.transform.GetComponent<EnemyController>().TakeDamage(10);
+            //hit.transform.GetComponent<EnemyHealthController>().TakeDamage(10);
             rigidbody.AddForce(new Vector2(0f, jumpForce));
         }
         
@@ -144,7 +144,7 @@ public class PlayerMovementController : MonoBehaviour {
             RaycastHit2D hit = Physics2D.Raycast(collider.transform.position, Vector2.right, 0.5f, enemyLayer);
             if (hit.collider != null)
             {
-                hit.transform.GetComponent<EnemyController>().TakeDamage(10);
+                hit.transform.GetComponent<EnemyHealthController>().TakeDamage(10);
             }
         }
     }
