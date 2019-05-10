@@ -20,6 +20,9 @@ public class ParallaxController : MonoBehaviour
     void Start()
     {
         alreadyClonedClouds = new List<GameObject>();
+        Vector3 position = GameObject.FindWithTag("Player").transform.position;
+        position.z = Camera.main.transform.position.z;
+        Camera.main.transform.position = position;
         mainCameraLastPosition = Camera.main.transform.position;
         InitLayer(backLayer);
         InitLayer(frontLayer);

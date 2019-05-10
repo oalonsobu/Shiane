@@ -12,7 +12,9 @@ public class EnemyMovementController : MonoBehaviour
     GameObject player;
     SpriteRenderer spriteRenderer;
     BoxCollider2D collider;
-    bool canGoForward = false;
+    bool canGoForward  = false;
+    bool playerInRange = false;
+    bool isAttacking   = false;
     
     void Start()
     {
@@ -47,6 +49,12 @@ public class EnemyMovementController : MonoBehaviour
         {
             transform.position += Vector3.right * enemySpeed * (spriteRenderer.flipX ? 1 : -1) * Time.deltaTime;
         }
+
+        if (playerInRange && !isAttacking)
+        {
+            Debug.Log("Attack");
+            isAttacking = false;
+        }
     }
 
     void UpdateStatus()
@@ -58,8 +66,8 @@ public class EnemyMovementController : MonoBehaviour
         
         //TODO: maybe two raycast, one in each side of the sprite...
         Vector3 pos = collider.transform.position;
-        var layerMask = (1 << 9) | (1 << 12) | (1 << 11);
-        RaycastHit2D hit = Physics2D.Raycast(pos, spriteRenderer.flipX ? Vector2.right: Vector2.left, collider.size.x, layerMask);
+        var worldMask = (1 << 9) | (1 << 12);
+        RaycastHit2D hit = Physics2D.Raycast(pos, spriteRenderer.flipX ? Vector2.right: Vector2.left, collider.size.x, worldMask);
         if (hit.collider != null)
         {
             canGoForward = false;
@@ -67,11 +75,19 @@ public class EnemyMovementController : MonoBehaviour
         else
         {
             pos += new Vector3(collider.size.x / 4 * (spriteRenderer.flipX ? 1 : -1), 0, 0);
-            hit = Physics2D.Raycast(pos, Vector3.down, collider.size.y, layerMask);
+            hit = Physics2D.Raycast(pos, Vector3.down, collider.size.y, worldMask);
             if (hit.collider == null)
             {
                 canGoForward = false;
             }
+        }
+        
+        var playerMask = (1 << 11);
+        hit = Physics2D.Raycast(pos, spriteRenderer.flipX ? Vector2.right: Vector2.left, collider.size.x * 2, playerMask);
+        if (hit.collider != null)
+        {
+            playerInRange = false;
+            canGoForward = false;
         }
     }
 }
