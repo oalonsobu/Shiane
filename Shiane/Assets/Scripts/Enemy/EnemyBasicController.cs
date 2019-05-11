@@ -37,6 +37,12 @@ public class EnemyBasicController : MonoBehaviour
 
     void FlipSprite()
     {
+        if (isAttacking)
+        {
+            //Do not flip the enemy 
+            return;
+        }
+        
         if (player.transform.position.x > transform.position.x)
         {
             spriteRenderer.flipX = true;
@@ -79,11 +85,7 @@ public class EnemyBasicController : MonoBehaviour
             canGoForward = true; //By default, he can move
         }
         
-        var playerMask = (1 << 11);
-        Vector3 pos = collider.transform.position;
-        RaycastHit2D hit = Physics2D.Raycast(pos, spriteRenderer.flipX ? Vector2.right: Vector2.left, collider.size.x, playerMask);
-        Debug.DrawRay(pos, (spriteRenderer.flipX ? Vector2.right: Vector2.left) * collider.size.x * 2);
-        if (hit.collider != null)
+        if (CheckForPlayerCollision())
         {
             playerInRange = true;
             canGoForward = false;
@@ -91,32 +93,46 @@ public class EnemyBasicController : MonoBehaviour
         //If he can attack the play he will not move
         else
         {
-            var worldMask = (1 << 9) | (1 << 12);
-            hit = Physics2D.Raycast(pos, spriteRenderer.flipX ? Vector2.right: Vector2.left, collider.size.x, worldMask);
-            if (hit.collider != null)
-            {
-                canGoForward = false;
-            }
-            else
-            {
-                pos += new Vector3(collider.size.x / 4 * (spriteRenderer.flipX ? 1 : -1), 0, 0);
-                hit = Physics2D.Raycast(pos, Vector3.down, collider.size.y, worldMask);
-                if (hit.collider == null)
-                {
-                    canGoForward = false;
-                }
-            }
+            canGoForward = !CheckForWorldCollision();
         }
+    }
+
+    bool CheckForPlayerCollision()
+    {
+        return CheckForCollision(collider.transform.position, spriteRenderer.flipX ? Vector2.right: Vector2.left, collider.size.x, (1 << 11));
+    }
+    
+    bool CheckForWorldCollision()
+    {
+        Vector3 pos = collider.transform.position;
+        if (CheckForCollision(pos, spriteRenderer.flipX ? Vector2.right : Vector2.left, collider.size.x,
+            (1 << 9) | (1 << 12)))
+        {
+            return true;
+        } else
+        {
+            pos += new Vector3(collider.size.x / 4 * (spriteRenderer.flipX ? 1 : -1), 0, 0);
+            return !(CheckForCollision(pos, Vector3.down, collider.size.y,
+                (1 << 9) | (1 << 12)));
+        }
+    }
+
+    bool CheckForCollision(Vector3 position, Vector3 direction, float size, LayerMask mask)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(position, direction, size, mask);
+        return hit.collider != null;
     }
 
     public void Attack()
     {
-        //isAttacking = false;
+        if (CheckForPlayerCollision() && player != null)
+        {
+            player.GetComponent<PlayerMovementController>().KillPlayer();
+        }
     }
-    
+     
     public void StopAttacking()
     {
-        Debug.Log("asdasdasd");
         isAttacking = false;
         animator.SetBool("Attacking", isAttacking);
     }

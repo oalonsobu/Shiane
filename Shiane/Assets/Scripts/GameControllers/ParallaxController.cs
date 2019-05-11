@@ -62,7 +62,7 @@ public class ParallaxController : MonoBehaviour
         foreach (Transform child in layer.transform)
         {
             float extents = child.GetComponent<SpriteRenderer>().bounds.extents.x;
-            float currentPos = 2 * extents * counter;
+            float currentPos = Camera.main.transform.position.x + 2 * extents * counter;
             child.position = new Vector3(currentPos, yPosition, layer.transform.position.z);
             counter++;
         }
