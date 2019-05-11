@@ -24,9 +24,9 @@ public class DialoguePointController : MonoBehaviour
             return;
         }
 
-        pointReached = true;
         if (col.gameObject.layer == 11) //TODO: Get layer by name
         {
+            pointReached = true;
             GameLoopManager.instance.InitializeDialogueText(text, cutSceneGO, playableIndex);
         }
     }
