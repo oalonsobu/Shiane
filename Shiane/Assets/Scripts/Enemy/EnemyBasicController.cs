@@ -7,8 +7,11 @@ public class EnemyBasicController : MonoBehaviour
 {
 
     [SerializeField] bool canMove = true;
+    [SerializeField] bool isMele  = true;
     [Range(0, 5f)] [SerializeField] float enemySpeed = 2.5f;
+    [SerializeField] GameObject arrowPrefab;
     
+    Transform arrowPosition;
     GameObject player;
     SpriteRenderer spriteRenderer;
     BoxCollider2D collider;
@@ -25,6 +28,13 @@ public class EnemyBasicController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+
+        if (!isMele)
+        {
+            arrowPosition = gameObject.transform.GetChild(0);
+        }
+        
+        
     }
 
     // Update is called once per frame
@@ -79,12 +89,6 @@ public class EnemyBasicController : MonoBehaviour
             return;
         }
         
-        
-        if (canMove)
-        {
-            canGoForward = true; //By default, he can move
-        }
-        
         if (CheckForPlayerCollision())
         {
             playerInRange = true;
@@ -95,11 +99,29 @@ public class EnemyBasicController : MonoBehaviour
         {
             canGoForward = !CheckForWorldCollision();
         }
+        
+        if (!canMove)
+        {
+            canGoForward = false; //By default, he can't move
+        }
     }
 
     bool CheckForPlayerCollision()
     {
-        return CheckForCollision(collider.transform.position, spriteRenderer.flipX ? Vector2.right: Vector2.left, collider.size.x, (1 << 11));
+        float range = collider.size.x;
+        Vector3 direction = spriteRenderer.flipX ? Vector2.right : Vector2.left;
+        if (isMele)
+        {
+            return CheckForCollision(collider.transform.position, direction, range, (1 << 11));
+        }
+        else
+        {
+            direction = player.transform.position - transform.position;
+            range = direction.magnitude;
+            RaycastHit2D hit = Physics2D.Raycast(collider.transform.position, direction, range, (1 << 11) | (1 << 9) | (1 << 12));
+            Debug.DrawRay(collider.transform.position, direction);
+            return hit.collider != null && hit.collider.tag == "Player";
+        }
     }
     
     bool CheckForWorldCollision()
@@ -125,9 +147,15 @@ public class EnemyBasicController : MonoBehaviour
 
     public void Attack()
     {
-        if (CheckForPlayerCollision() && player != null)
+        if (CheckForPlayerCollision() && player != null && isMele)
         {
             player.GetComponent<PlayerMovementController>().KillPlayer();
+        } else if (!isMele && arrowPosition != null)
+        {
+            var dir = player.transform.position - arrowPrefab.transform.position;
+            var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            Instantiate(arrowPrefab, arrowPosition.position, rotation);
         }
     }
      

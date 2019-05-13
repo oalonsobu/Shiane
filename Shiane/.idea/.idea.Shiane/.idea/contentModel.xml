@@ -17,6 +17,7 @@
             <e p="MissionCompleteMenuController.cs" t="Include" />
           </e>
           <e p="Enemy" t="Include">
+            <e p="ArrowController.cs" t="Include" />
             <e p="DeadlyObject.cs" t="Include" />
             <e p="EnemyBasicController.cs" t="Include" />
             <e p="EnemyHealthController.cs" t="Include" />

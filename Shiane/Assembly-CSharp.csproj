@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Common\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\Common\MenuPauseController.cs" />
     <Compile Include="Assets\Scripts\Common\MissionCompleteMenuController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\ArrowController.cs" />
     <Compile Include="Assets\Scripts\Enemy\DeadlyObject.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBasicController.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealthController.cs" />
