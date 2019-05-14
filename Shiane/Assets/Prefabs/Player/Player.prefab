@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7723253147627812166}
   - component: {fileID: 6855352216293241780}
   - component: {fileID: 8037562794974663143}
+  - component: {fileID: 5330296026831017803}
   - component: {fileID: 1416520160570867669}
   m_Layer: 0
   m_Name: Player
@@ -156,7 +157,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zDistance: 10
-  offsetX: 2
+--- !u!114 &5330296026831017803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7311453468151741631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4bc1a98fda5d145885cdcd404088d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireballPrefab: {fileID: 9144499773008838488, guid: a8643aa0728264c4ea1021f96d3b0133,
+    type: 3}
 --- !u!95 &1416520160570867669
 Animator:
   serializedVersion: 3

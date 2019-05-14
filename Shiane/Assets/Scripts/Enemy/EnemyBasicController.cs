@@ -152,7 +152,7 @@ public class EnemyBasicController : MonoBehaviour
             player.GetComponent<PlayerMovementController>().KillPlayer();
         } else if (!isMele && arrowPosition != null)
         {
-            var dir = player.transform.position - arrowPrefab.transform.position;
+            var dir = player.transform.position - arrowPosition.transform.position;
             var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             Instantiate(arrowPrefab, arrowPosition.position, rotation);

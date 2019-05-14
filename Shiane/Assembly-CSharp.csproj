@@ -74,6 +74,8 @@
     <Compile Include="Assets\Scripts\GameControllers\EndPointController.cs" />
     <Compile Include="Assets\Scripts\GameControllers\GameLoopManager.cs" />
     <Compile Include="Assets\Scripts\GameControllers\ParallaxController.cs" />
+    <Compile Include="Assets\Scripts\Player\FireballController.cs" />
+    <Compile Include="Assets\Scripts\Player\FirePowerController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovementController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/oscar/Desktop/uoc/Shiane/Shiane/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
