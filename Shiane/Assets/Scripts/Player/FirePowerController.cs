@@ -39,7 +39,6 @@ public class FirePowerController : MonoBehaviour
             var dir = position - transform.position;
             var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            Debug.Log(position);
             Instantiate(fireballPrefab, transform.position, rotation);
         }
     }

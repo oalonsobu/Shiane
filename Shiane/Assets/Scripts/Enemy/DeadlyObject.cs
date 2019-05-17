@@ -5,11 +5,11 @@ using UnityEngine;
 public class DeadlyObject : MonoBehaviour
 {
     
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.layer == 11) //TODO: Get layer by name
         {
-            col.gameObject.GetComponent<PlayerMovementController>().KillPlayer();
+            col.gameObject.GetComponent<PlayerMovementController>().KillPlayer(false);
         }
     }
     

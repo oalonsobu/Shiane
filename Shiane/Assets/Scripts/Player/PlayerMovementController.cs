@@ -29,6 +29,7 @@ public class PlayerMovementController : MonoBehaviour {
     CapsuleCollider2D collider;
     SpriteRenderer spriteRenderer;
     Animator animator;
+    ShieldPowerController shieldPowerController;
 
     void Start ()
     {
@@ -38,6 +39,8 @@ public class PlayerMovementController : MonoBehaviour {
         spriteRenderer  = gameObject.GetComponent<SpriteRenderer>();
         animator        = gameObject.GetComponent<Animator>();
         
+        shieldPowerController = gameObject.GetComponent<ShieldPowerController>();
+            
         colliderSizeRaycast = 3 * collider.size.y / 4;
     }
 
@@ -149,16 +152,19 @@ public class PlayerMovementController : MonoBehaviour {
         }
     }
 
-    public void KillPlayer()
+    public void KillPlayer(bool ignoreShield)
     {
-        GameLoopManager.instance.GameOver();
+        if (!shieldPowerController.IsActive() || ignoreShield)
+        {
+            GameLoopManager.instance.GameOver();
+        }
     }
 
     void CheckFallDeath()
     {
         if (rigidbody.position.y < -2)
         {
-            KillPlayer();
+            KillPlayer(true);
         }
     }
     

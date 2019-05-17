@@ -149,7 +149,7 @@ public class EnemyBasicController : MonoBehaviour
     {
         if (CheckForPlayerCollision() && player != null && isMele)
         {
-            player.GetComponent<PlayerMovementController>().KillPlayer();
+            player.GetComponent<PlayerMovementController>().KillPlayer(false);
         } else if (!isMele && arrowPosition != null)
         {
             var dir = player.transform.position - arrowPosition.transform.position;
