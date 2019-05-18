@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b95cf26-3b12-4dbf-836c-9fa5222d58a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Shiane/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shiane/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Shiane/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shiane/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/DeadlyObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/DeadlyObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/GridBrush/UnityEditor.GridBrush.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/GridBrush/UnityEditor.GridBrush.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/70d66e-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/70d66e-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/e9213d-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/e9213d-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/7b/7b13e12d0729d9c40900602061a254f7" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/7b/7b13e12d0729d9c40900602061a254f7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/ad/ad082f48d8fe95643b16e6f1164f99de" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/ad/ad082f48d8fe95643b16e6f1164f99de.info" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameControllers/FallingPlatformController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+            <state relative-caret-position="162">
+              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
               <folding>
                 <marker date="1558193641527" expanded="false" signature="6:78" ph="..." />
                 <marker date="1558193641527" expanded="true" signature="162:1275" ph="{...}" />
@@ -130,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBasicController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="309">
-              <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="38" />
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="38" />
               <folding>
                 <marker date="1558113141657" expanded="false" signature="6:97" ph="..." />
                 <marker date="1558113141657" expanded="true" signature="148:4623" ph="{...}" />
@@ -429,12 +413,12 @@
       <workItem from="1557772902144" duration="4662000" />
       <workItem from="1557858469340" duration="5400000" />
       <workItem from="1558108345462" duration="5536000" />
-      <workItem from="1558176427611" duration="7661000" />
+      <workItem from="1558176427611" duration="9597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155186000" />
+    <option name="totallyTimeSpent" value="157122000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -449,7 +433,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23454158" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23454158" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -466,7 +450,7 @@
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4989339" weight="0.32936078" />
       <window_info anchor="bottom" id="Unit Tests" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.48667377" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.48667377" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5133262" side_tool="true" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Unity" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -851,7 +835,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyBasicController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
-          <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="38" />
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="38" />
           <folding>
             <marker date="1558113141657" expanded="false" signature="6:97" ph="..." />
             <marker date="1558113141657" expanded="true" signature="148:4623" ph="{...}" />
@@ -887,8 +871,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameControllers/FallingPlatformController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+        <state relative-caret-position="162">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding>
             <marker date="1558193641527" expanded="false" signature="6:78" ph="..." />
             <marker date="1558193641527" expanded="true" signature="162:1275" ph="{...}" />
