@@ -27,6 +27,7 @@
             <e p="CameraController.cs" t="Include" />
             <e p="DialoguePointController.cs" t="Include" />
             <e p="EndPointController.cs" t="Include" />
+            <e p="FallingPlatformController.cs" t="Include" />
             <e p="GameLoopManager.cs" t="Include" />
             <e p="ParallaxController.cs" t="Include" />
           </e>

@@ -12,5 +12,4 @@ public class DeadlyObject : MonoBehaviour
             col.gameObject.GetComponent<PlayerMovementController>().KillPlayer(false);
         }
     }
-    
 }
