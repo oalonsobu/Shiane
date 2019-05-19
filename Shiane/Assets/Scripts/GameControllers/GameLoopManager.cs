@@ -15,6 +15,9 @@ public class GameLoopManager : MonoBehaviour {
 
     private Scene currentScene;
 
+    bool endGameMenuEnabled = false;
+    GameObject player;
+
     public Scene CurrentScene
     {
         get => currentScene;
@@ -31,6 +34,7 @@ public class GameLoopManager : MonoBehaviour {
         gameOverMenu.SetActive(false);
         missionCompleteMenu.SetActive(false);
         Time.timeScale = 1;
+        player = GameObject.FindWithTag("Player");
     }
 	
 	// Update is called once per frame
@@ -48,8 +52,15 @@ public class GameLoopManager : MonoBehaviour {
     }
 
     void ShowGameOverMenu() {
-        gameOverMenu.SetActive(true);
-        Time.timeScale = 0;
+        if (endGameMenuEnabled)
+        {
+            gameOverMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            player.GetComponent<PlayerHealthController>().Respawn();
+        }       
     }
 
     void ShowMissionCompleteMenu() {

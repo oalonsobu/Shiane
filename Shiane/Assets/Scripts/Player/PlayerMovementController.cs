@@ -29,7 +29,6 @@ public class PlayerMovementController : MonoBehaviour {
     CapsuleCollider2D collider;
     SpriteRenderer spriteRenderer;
     Animator animator;
-    ShieldPowerController shieldPowerController;
 
     void Start ()
     {
@@ -38,8 +37,6 @@ public class PlayerMovementController : MonoBehaviour {
         collider        = gameObject.GetComponent<CapsuleCollider2D>();
         spriteRenderer  = gameObject.GetComponent<SpriteRenderer>();
         animator        = gameObject.GetComponent<Animator>();
-        
-        shieldPowerController = gameObject.GetComponent<ShieldPowerController>();
             
         colliderSizeRaycast = 3 * collider.size.y / 4;
     }
@@ -51,13 +48,11 @@ public class PlayerMovementController : MonoBehaviour {
         Jump();
         Move();
         CheckForEnemies();
-        CheckFallDeath();
         FlipSprite();
     }
 
     void UpdateGrounded()
     {
-        //TODO: maybe two raycast, one in each side of the sprite...
         Vector3 pos = collider.transform.position;
         pos.x += collider.size.x / 2;
         RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.down, colliderSizeRaycast, groundLayer | enemyLayer);
@@ -149,22 +144,6 @@ public class PlayerMovementController : MonoBehaviour {
             {
                 hit.transform.GetComponent<EnemyHealthController>().TakeDamage(10);
             }
-        }
-    }
-
-    public void KillPlayer(bool ignoreShield)
-    {
-        if (!shieldPowerController.IsActive() || ignoreShield)
-        {
-            GameLoopManager.instance.GameOver();
-        }
-    }
-
-    void CheckFallDeath()
-    {
-        if (rigidbody.position.y < -2)
-        {
-            KillPlayer(true);
         }
     }
     

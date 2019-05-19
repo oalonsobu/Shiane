@@ -15,18 +15,10 @@ public class ParallaxController : MonoBehaviour
     float backLayerSpeed  = 2f;
 
     private List<GameObject> alreadyClonedClouds;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
-        alreadyClonedClouds = new List<GameObject>();
-        Vector3 position = GameObject.FindWithTag("Player").transform.position;
-        position.z = Camera.main.transform.position.z;
-        Camera.main.transform.position = position;
-        mainCameraLastPosition = Camera.main.transform.position;
-        InitLayer(backLayer);
-        InitLayer(frontLayer);
-        InitCloudLayer();
+        InitCamera();
     }
 
     // Update is called once per frame
@@ -37,6 +29,18 @@ public class ParallaxController : MonoBehaviour
         UpdateCloudLayer(cloudLayerSpeed * 3);
         
         mainCameraLastPosition = Camera.main.transform.position;
+    }
+    
+    public void InitCamera()
+    {
+        alreadyClonedClouds = new List<GameObject>();
+        Vector3 position = GameObject.FindWithTag("Player").transform.position;
+        position.z = Camera.main.transform.position.z;
+        Camera.main.transform.position = position;
+        mainCameraLastPosition = Camera.main.transform.position;
+        InitLayer(backLayer);
+        InitLayer(frontLayer);
+        InitCloudLayer();
     }
 
     bool IsInLeftSideScreen(float pos, float size)

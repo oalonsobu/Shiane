@@ -9,7 +9,7 @@ public class DeadlyObject : MonoBehaviour
     {
         if (col.gameObject.layer == 11) //TODO: Get layer by name
         {
-            col.gameObject.GetComponent<PlayerMovementController>().KillPlayer(false);
+            col.gameObject.GetComponent<PlayerHealthController>().KillPlayer(false);
         }
     }
 }
