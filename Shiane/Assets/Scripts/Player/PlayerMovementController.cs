@@ -18,7 +18,7 @@ public class PlayerMovementController : MonoBehaviour {
     Vector3 dashDirection;
     float dashTime = 0.1f;
     float currentDashTime;
-    bool canDash = false;
+    int remainingDashes = 2;
     bool dashReleased = true;
     bool isDashing = false;
     bool grounded = true;
@@ -73,7 +73,7 @@ public class PlayerMovementController : MonoBehaviour {
         
         if (hit.collider != null)
         {
-            canDash = true;
+            remainingDashes = 2;
             grounded = true;     
         }
         else
@@ -101,9 +101,9 @@ public class PlayerMovementController : MonoBehaviour {
         Vector3 vForce = Vector3.up * Input.GetAxis("Vertical");
         Vector3 hForce = Vector3.right * Input.GetAxis("Horizontal");
         dashDirection = hForce.normalized + vForce.normalized;
-        if (canDash && dash && Math.Abs(dashDirection.magnitude) > 0)
+        if (remainingDashes > 0 && dash && Math.Abs(dashDirection.magnitude) > 0)
         {
-            canDash  = false;
+            remainingDashes--;
             dashReleased = false;
             currentDashTime = dashTime;
             isDashing = true;
