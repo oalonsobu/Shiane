@@ -19,16 +19,19 @@ public class ShieldPowerController : MonoBehaviour
 
     void UpdateCD()
     {
-        if (currentcdTime < cdTime)
+        if (currentcdTime > 0)
         {
-            currentcdTime += Time.deltaTime;
+            currentcdTime -= Time.deltaTime;
+            GameLoopManager.instance.UpdateShieldCounter(currentcdTime);
         }
         else if (shieldInCD)
         {
+            currentcdTime = 0;
+            GameLoopManager.instance.UpdateShieldCounter(currentcdTime);
             shieldInCD = false;
         }
 
-        if (activeTime < currentcdTime)
+        if (cdTime - activeTime > currentcdTime)
         {
             shieldGO.SetActive(false);
         }
@@ -40,7 +43,8 @@ public class ShieldPowerController : MonoBehaviour
         if (shield && !shieldInCD)
         {
             shieldInCD = true;
-            currentcdTime = 0;
+            currentcdTime = cdTime;
+            GameLoopManager.instance.UpdateShieldCounter(currentcdTime);
             shieldGO.SetActive(true);
         }
     }

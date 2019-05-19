@@ -35,7 +35,7 @@ public class ArrowController : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.layer != 11 && col.gameObject.layer != 10) //TODO: Get layer by name
+        if (col.gameObject.layer != 11 && col.gameObject.layer != 10 && col.gameObject.layer != 0) //TODO: Get layer by name
         {
             Destroy(gameObject);
         }

@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameLoopManager : MonoBehaviour {
 
@@ -12,7 +14,15 @@ public class GameLoopManager : MonoBehaviour {
     [SerializeField] GameObject gameOverMenu;
     [SerializeField] GameObject missionCompleteMenu;
     [SerializeField] GameObject dialogueBox;
+    
+    [SerializeField] Text timerText;
+    float timer;
 
+    [SerializeField] Text deathCounterText;
+    [SerializeField] Text dashesCounterText;
+    [SerializeField] Text shieldCounterText;
+    [SerializeField] Text fireballCounterText;
+    
     private Scene currentScene;
 
     bool endGameMenuEnabled = false;
@@ -35,6 +45,10 @@ public class GameLoopManager : MonoBehaviour {
         missionCompleteMenu.SetActive(false);
         Time.timeScale = 1;
         player = GameObject.FindWithTag("Player");
+
+        timer = 0.0f;
+        timerText.text = timer + " s";
+        UpdateDeathCounter(0);
     }
 	
 	// Update is called once per frame
@@ -48,7 +62,8 @@ public class GameLoopManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.P)) {
             PauseGame();
         }
-        
+
+        UpdateCounter();
     }
 
     void ShowGameOverMenu() {
@@ -110,5 +125,32 @@ public class GameLoopManager : MonoBehaviour {
             dialogueBox.SetActive(false);
             Time.timeScale = 1;;
         }
+    }
+
+    void UpdateCounter()
+    {
+        timer += Time.unscaledDeltaTime;
+        timerText.text = String.Format("{0:0.00}", timer) + " s";
+    }
+
+
+    public void UpdateDeathCounter(int deathCount)
+    {
+        deathCounterText.text = deathCount + " deaths";
+    }
+    
+    public void UpdateDashesCounter(int count)
+    {
+        dashesCounterText.text = count + "";
+    }
+    
+    public void UpdateShieldCounter(float time)
+    {
+        shieldCounterText.text = String.Format("{0:0.00}", time) + " s";
+    }
+    
+    public void UpdateFireballCounter(float time)
+    {
+        fireballCounterText.text = String.Format("{0:0.00}", time) + " s";
     }
 }

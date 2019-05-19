@@ -108,6 +108,7 @@ public class PlayerMovementController : MonoBehaviour {
             currentDashTime = dashTime;
             isDashing = true;
             Physics2D.IgnoreLayerCollision(11, 10, true);//TODO: Get layer by name
+            GameLoopManager.instance.UpdateDashesCounter(remainingDashes);
         }
         
         if (currentDashTime >= 0)

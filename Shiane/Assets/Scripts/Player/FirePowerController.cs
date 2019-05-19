@@ -18,12 +18,15 @@ public class FirePowerController : MonoBehaviour
 
     void UpdateCD()
     {
-        if (currentcdTime < cdTime)
+        if (currentcdTime > 0)
         {
-            currentcdTime += Time.deltaTime;
+            currentcdTime -= Time.deltaTime;
+            GameLoopManager.instance.UpdateFireballCounter(currentcdTime);
         }
         else if (shootInCD)
         {
+            currentcdTime = 0;
+            GameLoopManager.instance.UpdateFireballCounter(currentcdTime);
             shootInCD = false;
         }
     }
@@ -34,7 +37,8 @@ public class FirePowerController : MonoBehaviour
         if (shoot && !shootInCD)
         {
             shootInCD = true;
-            currentcdTime = 0;
+            currentcdTime = cdTime;
+            GameLoopManager.instance.UpdateFireballCounter(currentcdTime);
             Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             var dir = position - transform.position;
             var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;

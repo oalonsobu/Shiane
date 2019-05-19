@@ -8,6 +8,8 @@ public class PlayerHealthController : MonoBehaviour
     Rigidbody2D rigidbody;
     ShieldPowerController shieldPowerController;
     Transform initPoint;
+
+    int deathCounter;
     
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,7 @@ public class PlayerHealthController : MonoBehaviour
         rigidbody             = gameObject.GetComponent<Rigidbody2D>();
         shieldPowerController = gameObject.GetComponent<ShieldPowerController>();
         initPoint = GameObject.FindWithTag("InitialPoint").transform;
+        deathCounter = 0;
     }
 
     // Update is called once per frame
@@ -28,6 +31,8 @@ public class PlayerHealthController : MonoBehaviour
         if (!shieldPowerController.IsActive() || ignoreShield)
         {
             GameLoopManager.instance.GameOver();
+            deathCounter++;
+            GameLoopManager.instance.UpdateDeathCounter(deathCounter);
         }
     }
     
