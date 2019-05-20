@@ -6,12 +6,10 @@ using UnityEngine.Tilemaps;
 public class FallingPlatformController : MonoBehaviour
 {
     Tilemap tilemap;
-    TilemapRenderer tilemapRenderer;
 
     void Start()
     {
         tilemap         = gameObject.GetComponent<Tilemap>();
-        tilemapRenderer = gameObject.GetComponent<TilemapRenderer>();
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -30,6 +28,7 @@ public class FallingPlatformController : MonoBehaviour
 
     IEnumerator DestroyTileMap(Vector3Int position)
     {
+        tilemap.SetTileFlags(position, TileFlags.None);
         while (true)
         {
             Color color = tilemap.GetColor(position);
@@ -37,6 +36,7 @@ public class FallingPlatformController : MonoBehaviour
             if (color.a < 0)
             {
                 tilemap.SetTile(position, null);
+                break;
             }
             tilemap.SetColor(position, color);
             yield return new WaitForSeconds(0.05f);
