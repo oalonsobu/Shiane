@@ -16,7 +16,7 @@ public class PlayerHealthController : MonoBehaviour
     {
         rigidbody             = gameObject.GetComponent<Rigidbody2D>();
         shieldPowerController = gameObject.GetComponent<ShieldPowerController>();
-        initPoint = GameObject.FindWithTag("InitialPoint").transform;
+        initPoint             = GameObject.FindWithTag("InitialPoint").transform;
         deathCounter = 0;
     }
 

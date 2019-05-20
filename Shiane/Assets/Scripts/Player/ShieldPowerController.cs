@@ -51,6 +51,6 @@ public class ShieldPowerController : MonoBehaviour
 
     public bool IsActive()
     {
-        return currentcdTime < activeTime;
+        return shieldGO.activeSelf;
     }
 }

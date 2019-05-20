@@ -6,7 +6,7 @@ public class MovingObject : MonoBehaviour
 {
     
     [SerializeField] Transform[] positions;
-    [Range(0, 5f)] [SerializeField] float speed = 1f;
+    [Range(0, 10f)] [SerializeField] float speed = 1f;
     [Range(0, 5f)] [SerializeField] float reposetime = 1f;
 
     bool stopped = false;
