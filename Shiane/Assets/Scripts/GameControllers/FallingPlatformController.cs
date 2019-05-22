@@ -29,6 +29,7 @@ public class FallingPlatformController : MonoBehaviour
     IEnumerator DestroyTileMap(Vector3Int position)
     {
         tilemap.SetTileFlags(position, TileFlags.None);
+        var originalTile = tilemap.GetTile(position);
         while (true)
         {
             Color color = tilemap.GetColor(position);
@@ -41,5 +42,8 @@ public class FallingPlatformController : MonoBehaviour
             tilemap.SetColor(position, color);
             yield return new WaitForSeconds(0.05f);
         }
+
+        yield return new WaitForSeconds(5f);
+        tilemap.SetTile(position, originalTile);
     }
 }

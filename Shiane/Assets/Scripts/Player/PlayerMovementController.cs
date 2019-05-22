@@ -39,6 +39,7 @@ public class PlayerMovementController : MonoBehaviour {
         animator        = gameObject.GetComponent<Animator>();
             
         colliderSizeRaycast = 3 * collider.size.y / 4;
+        GameLoopManager.instance.UpdateDashesCounter(remainingDashes);
     }
 
     void FixedUpdate()
@@ -59,14 +60,14 @@ public class PlayerMovementController : MonoBehaviour {
         
         if (hit.collider == null)
         {
-            //If there is no collision in that place we calculate the other one (maybe we are missing some collisions, be I think is not that important
+            //If there is no collision in that place we calculate the other one (maybe we are missing some collisions, but I think is not that important=
             pos.x -= collider.size.x;
             hit = Physics2D.Raycast(pos, Vector2.down, colliderSizeRaycast, groundLayer | enemyLayer);
         }
         
         if (hit.collider != null && (1 << hit.collider.gameObject.layer) == enemyLayer)
         {
-            //TODO: jumping over it will kill the enemy ??
+            //jumping over it will kill the enemy ??
             //hit.transform.GetComponent<EnemyHealthController>().TakeDamage(10);
             rigidbody.AddForce(new Vector2(0f, jumpForce));
         }
@@ -74,11 +75,15 @@ public class PlayerMovementController : MonoBehaviour {
         if (hit.collider != null)
         {
             remainingDashes = 2;
-            grounded = true;     
+            GameLoopManager.instance.UpdateDashesCounter(remainingDashes);
+            grounded = true;
+            rigidbody.gravityScale = 1;
         }
         else
         {
             grounded = false;
+            //Make the player fall faster
+            rigidbody.gravityScale += 0.02f;
         }
         
         animator.SetBool("Grounded", grounded);
