@@ -33,7 +33,7 @@ public class FirePowerController : MonoBehaviour
 
     void Shoot()
     {
-        bool shoot = Input.GetAxis("Fire1") > 0;
+        bool shoot = Input.GetAxis("Fire") > 0;
         if (shoot && !shootInCD)
         {
             shootInCD = true;

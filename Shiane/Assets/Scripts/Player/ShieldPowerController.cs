@@ -39,7 +39,7 @@ public class ShieldPowerController : MonoBehaviour
 
     void ActivateShield()
     {
-        bool shield = Input.GetAxis("Fire2") > 0;
+        bool shield = Input.GetAxis("Shield") > 0;
         if (shield && !shieldInCD)
         {
             shieldInCD = true;
