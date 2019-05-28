@@ -9,6 +9,7 @@ public class ArrowController : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
     
+    bool wasInscreen = false;
     
     void Start()
     {
@@ -18,7 +19,12 @@ public class ArrowController : MonoBehaviour
     void Update()
     {
         transform.position += transform.right * speed * Time.deltaTime;
-        if (IsOutsideScreen(transform.position.x, spriteRenderer.size.x))
+        bool isOutSideScreen = IsOutsideScreen(transform.position.x, spriteRenderer.size.x);
+        if (!wasInscreen)
+        {
+            wasInscreen = !isOutSideScreen;
+        }
+        if (isOutSideScreen && wasInscreen)
         {
             Destroy(gameObject);
         }

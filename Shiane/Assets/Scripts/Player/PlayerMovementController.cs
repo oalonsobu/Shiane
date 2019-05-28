@@ -69,7 +69,17 @@ public class PlayerMovementController : MonoBehaviour {
         {
             //jumping over it will kill the enemy ??
             //hit.transform.GetComponent<EnemyHealthController>().TakeDamage(10);
-            rigidbody.AddForce(new Vector2(0f, jumpForce));
+            if (hit.collider.gameObject.CompareTag("Boss"))
+            {
+                if (hit.transform.GetComponent<BossController>().IsShieldUp())
+                {
+                    transform.GetComponent<PlayerHealthController>().KillPlayer(true);
+                }
+            }
+            else
+            {
+                rigidbody.AddForce(new Vector2(0f, jumpForce));
+            }
         }
         
         if (hit.collider != null)
@@ -148,7 +158,19 @@ public class PlayerMovementController : MonoBehaviour {
             RaycastHit2D hit = Physics2D.Raycast(collider.transform.position, Vector2.right, 0.5f, enemyLayer);
             if (hit.collider != null)
             {
-                hit.transform.GetComponent<EnemyHealthController>().TakeDamage(10);
+                if (!hit.collider.gameObject.CompareTag("Boss"))
+                {
+                    hit.transform.GetComponent<EnemyHealthController>().TakeDamage(10);
+                }
+                else if (hit.transform.GetComponent<BossController>().IsShieldUp())
+                {
+                    transform.GetComponent<PlayerHealthController>().KillPlayer(true);
+                }
+                else
+                {
+                    hit.transform.GetComponent<BossController>().TakeDashDamage(10); 
+                    rigidbody.AddForce(new Vector2(0f, jumpForce * 75)); //TODO: convert to backwards force
+                }    
             }
         }
     }

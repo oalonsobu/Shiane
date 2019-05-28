@@ -33,8 +33,6 @@ public class EnemyBasicController : MonoBehaviour
         {
             arrowPosition = gameObject.transform.GetChild(0);
         }
-        
-        
     }
 
     // Update is called once per frame
@@ -72,8 +70,7 @@ public class EnemyBasicController : MonoBehaviour
 
         if (playerInRange && !isAttacking)
         {
-            isAttacking = true;
-            animator.SetBool("Attacking", isAttacking);
+            InitAttack();
         }
         
         animator.SetBool("Walking", canGoForward);
@@ -143,6 +140,12 @@ public class EnemyBasicController : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(position, direction, size, mask);
         return hit.collider != null;
+    }
+
+    void InitAttack()
+    {
+        isAttacking = true;
+        animator.SetBool("Attacking", isAttacking);
     }
 
     public void Attack()
