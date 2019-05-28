@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossController : MonoBehaviour
 {
@@ -11,9 +12,11 @@ public class BossController : MonoBehaviour
 
     float currentHealth;
     [SerializeField] float maxHealth = 100;
+    [SerializeField] Slider healthUI;
     
     float currentShield;
     [SerializeField] float maxShield = 100;
+    [SerializeField] Slider shieldUI;
     bool isShieldUp = true;
     
     bool shootArrowsInCD = false;
@@ -26,6 +29,10 @@ public class BossController : MonoBehaviour
     {
         currentHealth = maxHealth;
         currentShield = maxShield;
+        shieldUI.maxValue = maxShield;
+        shieldUI.value = currentShield;
+        healthUI.maxValue = maxHealth;
+        healthUI.value = currentShield;
         Transform parentArrow = transform.Find("ArrowPositions");
         if (parentArrow != null)
         {
@@ -83,6 +90,7 @@ public class BossController : MonoBehaviour
         if (currentShield > 0) //TODO: maybe shield is up or something like that
         {
             currentShield -= damage;
+            shieldUI.value = currentShield;
         }
 
         if (currentShield <= 0)
@@ -93,9 +101,10 @@ public class BossController : MonoBehaviour
     
     public void TakeDashDamage(int damage)
     {
-        if (currentShield > 0) //TODO: maybe shield is up or something like that
+        if (currentHealth > 0) //TODO: maybe shield is up or something like that
         {
-            currentShield -= damage;
+            currentHealth -= damage;
+            healthUI.value = currentHealth;
         }
     }
     
