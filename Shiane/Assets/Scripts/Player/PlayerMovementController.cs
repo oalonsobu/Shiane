@@ -126,18 +126,24 @@ public class PlayerMovementController : MonoBehaviour {
             GameLoopManager.instance.UpdateDashesCounter(remainingDashes);
         }
         
-        if (currentDashTime >= 0)
+        if (currentDashTime > 0)
         {
             rigidbody.velocity = dashDirection * dashVelocity;
             currentDashTime -= Time.deltaTime;
         }
         else if (isDashing)
         {
-            rigidbody.velocity = Vector3.zero;
-            isDashing = false;
-            Physics2D.IgnoreLayerCollision(11, 10, false);//TODO: Get layer by name
+            StopDash();
         }
         dashReleased = dashReleased || Input.GetAxis("Dash") <= 0; //To avoid continuously dashing;
+    }
+
+    void StopDash()
+    {
+        currentDashTime = 0;
+        rigidbody.velocity = Vector3.zero;
+        isDashing = false;
+        Physics2D.IgnoreLayerCollision(11, 10, false);//TODO: Get layer by name
     }
     
     void Move()
@@ -168,8 +174,11 @@ public class PlayerMovementController : MonoBehaviour {
                 }
                 else
                 {
-                    hit.transform.GetComponent<BossController>().TakeDashDamage(10); 
-                    rigidbody.AddForce(new Vector2(0f, jumpForce * 75)); //TODO: convert to backwards force
+                    hit.transform.GetComponent<BossController>().TakeDashDamage(10);
+                    var force = transform.position - hit.transform.position;
+                    force.Normalize();
+                    StopDash();
+                    rigidbody.velocity = (new Vector2( force.x * 25, force.y * 25));
                 }    
             }
         }

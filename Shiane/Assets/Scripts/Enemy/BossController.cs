@@ -20,34 +20,41 @@ public class BossController : MonoBehaviour
         GoingUp = 2,
         Down = 3
     };
-    
-    [SerializeField] GameObject arrowPrefab;
 
-    List<GameObject> arrowPositions = new List<GameObject>();
-
+    //Health vars
     float currentHealth;
     [SerializeField] float maxHealth = 100;
     [SerializeField] Slider healthUI;
     
+    //Shield vars
+    [SerializeField] GameObject shieldChild;
+    CircleCollider2D shieldCollider2D;
     float currentShield;
     [SerializeField] float maxShield = 100;
     [SerializeField] Slider shieldUI;
     bool isShieldUp = true;
     
     //Shooting phase vars
+    [SerializeField] GameObject arrowPrefab;
+    List<GameObject> arrowPositions = new List<GameObject>();
     bool shootArrowsInCD = false;
     float shootArrowsCdTime = .5f;
     float shootArrowsCurrentcdTime = .0f;
 
     //GoingDown phase vars
     Vector3 reposePosition = Vector3.zero;
-    Quaternion reposeRotation = Quaternion.identity;
+    float fallingSpeed = 1.25f;
+    
+    //GoingUp phase vars
+    Vector3 attackPosition;
+    float goingUpSpeed = 2.5f;
     
     BossPhase currentPhase;
     
     // Start is called before the first frame update
     void Start()
     {
+        shieldCollider2D = gameObject.GetComponent<CircleCollider2D>();
         currentHealth = maxHealth;
         currentShield = maxShield;
         shieldUI.maxValue = maxShield;
@@ -62,6 +69,8 @@ public class BossController : MonoBehaviour
                 arrowPositions.Add(arrowPosition.gameObject);
             }
         }
+
+        attackPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -78,6 +87,22 @@ public class BossController : MonoBehaviour
             case BossPhase.GoingDown:
                 UpdateGoingDownPhase();
                 break;
+            case BossPhase.GoingUp:
+                UpdateGoingUpPhase();
+                break;
+        }
+    }
+    
+    void UpdateGoingUpPhase()
+    {
+        if (attackPosition != Vector3.zero)
+        {
+            Vector3 direction = attackPosition - transform.position;
+            transform.Translate(direction.normalized * goingUpSpeed * Time.deltaTime);
+            if (Vector3.Distance(attackPosition, transform.position) < 0.1f || attackPosition.y < transform.position.y)
+            {
+                ChangePhase(BossPhase.Shooting);
+            }
         }
     }
     
@@ -85,13 +110,12 @@ public class BossController : MonoBehaviour
     {
         if (reposePosition != Vector3.zero)
         {
-            transform.position = reposePosition;
-            transform.rotation = reposeRotation;
+            Vector3 direction = reposePosition - transform.position;
+            transform.Translate(direction.normalized * fallingSpeed * Time.deltaTime);
             
-            if (transform.position == reposePosition)
+            if (Vector3.Distance(transform.position, reposePosition) < 0.1f || transform.position.y < reposePosition.y)
             {
                 ChangePhase(BossPhase.Down);
-                Debug.Log(currentPhase);
             }
         }
     }
@@ -103,7 +127,7 @@ public class BossController : MonoBehaviour
         if (hit.collider != null)
         {
             reposePosition = hit.point;
-            reposeRotation = transform.rotation;
+            reposePosition.y += gameObject.GetComponent<CircleCollider2D>().radius - 0.25f;
         }
     }
 
@@ -116,7 +140,7 @@ public class BossController : MonoBehaviour
     {
         if (!shootArrowsInCD)
         {
-            //ShootArrows();  
+            ShootArrows();  
         }
         
         if (shootArrowsInCD)
@@ -134,12 +158,10 @@ public class BossController : MonoBehaviour
     {
         if (!IsShieldUp())
         {
-            currentShield += 1f * Time.deltaTime;
+            currentShield += 5f * Time.deltaTime;
             shieldUI.value = currentShield;
             if (currentShield >= 100)
             {
-                currentShield = 100;
-                isShieldUp = true;
                 ChangePhase(BossPhase.GoingUp);
             }
         }
@@ -164,25 +186,28 @@ public class BossController : MonoBehaviour
         {
             currentShield -= damage;
             shieldUI.value = currentShield;
-        }
-
-        if (currentShield <= 0)
-        {
-            ChangePhase(BossPhase.GoingDown);
+            
+            if (currentShield <= 0)
+            {
+                ChangePhase(BossPhase.GoingDown);
+            }
         }
     }
     
     public void TakeDashDamage(int damage)
     {
-        if (!IsShieldUp())
+        if (!IsShieldUp() && (currentPhase == BossPhase.Down || currentPhase == BossPhase.GoingDown))
         {
             currentHealth -= damage;
             healthUI.value = currentHealth;
-            //Refill shield completely
-            currentShield = 100;
-            isShieldUp = true;
-            shieldUI.value = currentShield;
-            ChangePhase(BossPhase.GoingUp);
+            if (currentHealth <= 0)
+            {
+                GameLoopManager.instance.EndGame();
+            }
+            else
+            {
+                ChangePhase(BossPhase.GoingUp);
+            }
         }
     }
 
@@ -193,14 +218,25 @@ public class BossController : MonoBehaviour
             case BossPhase.GoingUp:
                 currentPhase = BossPhase.GoingUp;
                 reposePosition = Vector3.zero;
+                //Refill shield completely
+                currentShield = 100;
+                shieldUI.value = currentShield;
+                shieldChild.SetActive(true);
+                shieldCollider2D.enabled = true;
                 break;
             case BossPhase.GoingDown:
                 isShieldUp = false;
                 currentPhase = BossPhase.GoingDown;
+                shieldChild.SetActive(false);
+                shieldCollider2D.enabled = false;
                 CalculateReposePosition();
                 break;
             case BossPhase.Down:
                 currentPhase = BossPhase.Down;
+                break;
+            case BossPhase.Shooting:
+                isShieldUp = true;
+                currentPhase = BossPhase.Shooting;
                 break;
         }
     }
