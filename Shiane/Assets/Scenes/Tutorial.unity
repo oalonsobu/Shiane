@@ -2419,6 +2419,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 917821706}
     m_Modifications:
+    - target: {fileID: 8833452749702138132, guid: 50145aeef47988147bddcc4684a45039,
+        type: 3}
+      propertyPath: m_Name
+      value: UID
+      objectReference: {fileID: 0}
     - target: {fileID: 3022503466401260134, guid: 50145aeef47988147bddcc4684a45039,
         type: 3}
       propertyPath: m_Color.r
@@ -2438,11 +2443,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8833452749702138132, guid: 50145aeef47988147bddcc4684a45039,
-        type: 3}
-      propertyPath: m_Name
-      value: UID
       objectReference: {fileID: 0}
     - target: {fileID: 8833452749702138139, guid: 50145aeef47988147bddcc4684a45039,
         type: 3}
@@ -4960,8 +4960,8 @@ PrefabInstance:
     - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
         type: 3}
       propertyPath: text.Array.data[8]
-      value: "Bueno, de momento te recomiendo huir de aqu\xED. Muevete con las teclas
-        \"a\", \"s\", \"d\" y \"w\", salta con la tecla \"espacio\"."
+      value: "Bueno, de momento te recomiendo huir de aqu\xED. Mu\xE9vete con las
+        teclas \"a\", \"s\", \"d\" y \"w\", salta con la tecla \"espacio\"."
       objectReference: {fileID: 0}
     - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
         type: 3}
@@ -5436,18 +5436,18 @@ PrefabInstance:
     - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
         type: 3}
       propertyPath: text.Array.data[1]
-      value: 'Mi nombre es Hikari. Supongo que has oido hablar de mi, soy el dios
-        de Luz. '
+      value: "Mi nombre es Hikari. Supongo que has o\xEDdo hablar de m\xED, soy el
+        dios de Luz. "
       objectReference: {fileID: 0}
     - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
         type: 3}
       propertyPath: text.Array.data[2]
       value: "Oh, no te preocupes. Estoy acostumbrado a que nadie me crea y se piensen
-        que estoy loco. Aunque hace muchisimos a\xF1os que no me encontraba en esta
-        situaci\xF3n. Hac\xEDa mucho tiempo que no hablaba con nadie... Miles y miles
-        de a\xF1os, desde que empez\xE9 la guerra con Kurayami... Aunque supongo que
-        ya conoces la historia. El dios de la luz y de la oscuridad se enfrentan en
-        una batalla que durar\xE1 hasta el fin de los tiempos...."
+        que estoy loco. Aunque hace much\xEDsimos a\xF1os que no me encontraba en
+        esta situaci\xF3n. Hac\xEDa mucho tiempo que no hablaba con nadie... Miles
+        y miles de a\xF1os, desde que empec\xE9 la guerra con Kurayami... Aunque supongo
+        que ya conoces la historia. El dios de la luz y de la oscuridad se enfrentan
+        en una batalla que durar\xE1 hasta el fin de los tiempos...."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66e79c747e476ea4bb060678f8a5a4be, type: 3}

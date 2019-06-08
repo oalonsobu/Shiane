@@ -43,10 +43,10 @@ MonoBehaviour:
     y: 30
     width: 1904
     height: 931
-  m_MinSize: {x: 683, y: 348}
+  m_MinSize: {x: 648, y: 348}
   m_MaxSize: {x: 12008, y: 8048}
   vertical: 1
-  controlID: 38
+  controlID: 119
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,10 +68,10 @@ MonoBehaviour:
     y: 0
     width: 1904
     height: 931
-  m_MinSize: {x: 683, y: 348}
+  m_MinSize: {x: 648, y: 348}
   m_MaxSize: {x: 12008, y: 8048}
   vertical: 0
-  controlID: 39
+  controlID: 120
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -91,16 +91,16 @@ MonoBehaviour:
     y: 0
     width: 886
     height: 931
-  m_MinSize: {x: 277, y: 74}
+  m_MinSize: {x: 242, y: 224}
   m_MaxSize: {x: 4002, y: 4024}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 23}
   - {fileID: 14}
   - {fileID: 20}
   - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 2
+  m_Selected: 3
   m_LastSelected: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 348}
   m_MaxSize: {x: 8006, y: 8048}
   vertical: 1
-  controlID: 19
+  controlID: 100
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 20
+  controlID: 101
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1468
+  m_LastSelectedObjectID: -10654
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -497,7 +497,7 @@ MonoBehaviour:
     m_CachedPref: 50
     m_ControlHash: 1964396721
     m_PrefName: Preview_TilemapBrushInspector
-  m_Palette: {fileID: 3326623670839315861, guid: b0b5e1ad41ea3fa438989f2c78a3362c,
+  m_Palette: {fileID: 546052974222814630, guid: 687f561b797a5da498a9ce023ce58005,
     type: 3}
 --- !u!114 &17
 MonoBehaviour:
@@ -593,19 +593,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/Characters
+    - Assets/Prefabs/Miscellaneous
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites/Characters
+  - Assets/Prefabs/Miscellaneous
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\oscar\Desktop\uoc\Shiane\Shiane
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 170}
-    m_SelectedIDs: 40100000
-    m_LastClickedID: 4160
+    m_SelectedIDs: 340e0000
+    m_LastClickedID: 3636
     m_ExpandedIDs: 00000000c2090000a60b0000c40d0000ca0d0000340e00005a0f0000ba0f0000cc0f00004010000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -659,8 +659,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 32140000
-    m_LastClickedInstanceID: 5170
+    m_SelectedInstanceIDs: e4930000
+    m_LastClickedInstanceID: 37860
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300005a32000052320000a25d000082640000b02f0000b20f00000c30000074300000923100001e0b00000e0f00004e31000058310000903100003c320000000000009a0a0000a4330000
     m_RenameOverlay:
@@ -753,20 +753,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: d4fbffff321400004c140000ca140000
+      m_SelectedIDs: 62d6ffff
+      m_LastClickedID: -10654
+      m_ExpandedIDs: e8d9ffff3adaffff86e2ffffa0e6ffffd4fbffff9e390000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Boss
-        m_OriginalName: Boss
+        m_Name: Player
+        m_OriginalName: Player
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 5170
+        m_UserData: -10654
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -810,9 +810,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.1503125, y: 4.370698, z: 0}
+    m_Target: {x: 100.65131, y: 33.23835, z: -0.063818105}
     speed: 2
-    m_Value: {x: -1.1503125, y: 4.370698, z: 0}
+    m_Value: {x: 100.65131, y: 33.23835, z: -0.063818105}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -844,9 +844,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: -1}
   m_Size:
-    m_Target: 1.3687676
+    m_Target: 7.753198
     speed: 2
-    m_Value: 1.3687676
+    m_Value: 7.753198
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -857,7 +857,7 @@ MonoBehaviour:
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
-  m_ViewIsLockedToObject: 1
+  m_ViewIsLockedToObject: 0
 --- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52

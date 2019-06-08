@@ -6,11 +6,18 @@ using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.VR;
 
 public class PlayerMovementController : MonoBehaviour {
+    
+    enum WallJump
+    {
+        NotAllowed = 0,
+        RightSide  = 1,
+        LeftSide   = 2
+    };
 
     [Range(0, 5f)] [SerializeField] float playerSpeed = 5f;
     [Range(0, 20f)] [SerializeField] float dashVelocity = 20f;
     [Range(0, .3f)] [SerializeField] float movementSmoothing = .05f;
-    [Range(200, 450)] [SerializeField] int jumpForce = 400;
+    [Range(400, 650)] [SerializeField] int jumpForce = 400;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask enemyLayer;
 
@@ -22,6 +29,7 @@ public class PlayerMovementController : MonoBehaviour {
     bool dashReleased = true;
     bool isDashing = false;
     bool grounded = true;
+    WallJump wallJumpAllowed = WallJump.NotAllowed;
     float colliderSizeRaycast = 0;
     
     //Unity components
@@ -54,15 +62,21 @@ public class PlayerMovementController : MonoBehaviour {
 
     void UpdateGrounded()
     {
+        //By default he can't jump
+        wallJumpAllowed = WallJump.NotAllowed;
+        
         Vector3 pos = collider.transform.position;
-        pos.x += collider.size.x / 2;
+        //TODO: No poner tan a la esquina
+        pos.x += collider.size.x / 4;
         RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.down, colliderSizeRaycast, groundLayer | enemyLayer);
+        Debug.DrawRay(pos, Vector2.down * colliderSizeRaycast);
         
         if (hit.collider == null)
         {
-            //If there is no collision in that place we calculate the other one (maybe we are missing some collisions, but I think is not that important=
-            pos.x -= collider.size.x;
+            //If there is no collision in that place we calculate the other one (maybe we are missing some collisions, but I think is not that important
+            pos.x -= collider.size.x / 2;
             hit = Physics2D.Raycast(pos, Vector2.down, colliderSizeRaycast, groundLayer | enemyLayer);
+            Debug.DrawRay(pos, Vector2.down * colliderSizeRaycast);
         }
         
         if (hit.collider != null && (1 << hit.collider.gameObject.layer) == enemyLayer)
@@ -87,26 +101,49 @@ public class PlayerMovementController : MonoBehaviour {
             remainingDashes = 2;
             GameLoopManager.instance.UpdateDashesCounter(remainingDashes);
             grounded = true;
-            rigidbody.gravityScale = 1;
         }
         else
         {
             grounded = false;
+            pos = collider.transform.position;
+            pos.x -= colliderSizeRaycast/2;
+            //TODO: bajar un poco, en plan a los pies
+            hit = Physics2D.Raycast(pos,  Vector2.right, colliderSizeRaycast, groundLayer);
+            Debug.DrawRay(pos, Vector2.right * colliderSizeRaycast);
+            if (hit.collider != null)
+            {
+                wallJumpAllowed = hit.point.x < transform.position.x ? WallJump.LeftSide : WallJump.RightSide;
+            }
+        }
+
+        if (grounded || wallJumpAllowed != WallJump.NotAllowed)
+        {
+            rigidbody.gravityScale = 1;
+        }
+        else
+        {
             //Make the player fall faster
             rigidbody.gravityScale += 0.02f;
         }
-        
+
         animator.SetBool("Grounded", grounded);
         animator.SetFloat("YVelocity", rigidbody.velocity.y);
     }
 
     void Jump()
     {
-        bool jump = Input.GetAxis("Jump") > 0 ;
+        
+        bool jump = Input.GetButtonDown("Jump");
         if (grounded && jump && !isDashing)
         {
             rigidbody.AddForce(new Vector2(0f, jumpForce));
             grounded = false;
+            rigidbody.velocity = Vector3.zero;
+        } else if (wallJumpAllowed != WallJump.NotAllowed && jump && !isDashing)
+        {
+            float force = jumpForce / 2;
+            rigidbody.AddForce(new Vector2((wallJumpAllowed == WallJump.RightSide ? -1 : 1) * force * 2, force));
+            rigidbody.velocity = Vector3.zero;
         }
     }
     
