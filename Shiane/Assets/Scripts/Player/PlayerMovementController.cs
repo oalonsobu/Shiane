@@ -132,18 +132,17 @@ public class PlayerMovementController : MonoBehaviour {
 
     void Jump()
     {
-        
         bool jump = Input.GetButtonDown("Jump");
         if (grounded && jump && !isDashing)
         {
+            rigidbody.velocity = Vector3.zero;
             rigidbody.AddForce(new Vector2(0f, jumpForce));
             grounded = false;
-            rigidbody.velocity = Vector3.zero;
         } else if (wallJumpAllowed != WallJump.NotAllowed && jump && !isDashing)
         {
             float force = jumpForce / 2;
-            rigidbody.AddForce(new Vector2((wallJumpAllowed == WallJump.RightSide ? -1 : 1) * force * 2, force));
             rigidbody.velocity = Vector3.zero;
+            rigidbody.AddForce(new Vector2((wallJumpAllowed == WallJump.RightSide ? -1 : 1) * force * 2, force));
         }
     }
     
