@@ -228,4 +228,10 @@ public class PlayerMovementController : MonoBehaviour {
 
         spriteRenderer.flipX = (!isFacingLeft && wasFacingRight) || isFacingRight;
     }
+
+    public void RefreshCooldownDash()
+    {
+        remainingDashes = 2;
+        GameLoopManager.instance.UpdateDashesCounter(remainingDashes);
+    }
 }

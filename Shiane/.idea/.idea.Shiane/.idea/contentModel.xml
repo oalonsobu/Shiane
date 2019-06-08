@@ -15,6 +15,7 @@
             <e p="MainMenuController.cs" t="Include" />
             <e p="MenuPauseController.cs" t="Include" />
             <e p="MissionCompleteMenuController.cs" t="Include" />
+            <e p="RefreshDiamondController.cs" t="Include" />
           </e>
           <e p="Enemy" t="Include">
             <e p="ArrowController.cs" t="Include" />
