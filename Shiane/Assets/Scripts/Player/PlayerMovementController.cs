@@ -116,7 +116,7 @@ public class PlayerMovementController : MonoBehaviour {
             }
         }
 
-        if (grounded || wallJumpAllowed != WallJump.NotAllowed)
+        if (grounded || wallJumpAllowed != WallJump.NotAllowed || isDashing)
         {
             rigidbody.gravityScale = 1;
         }

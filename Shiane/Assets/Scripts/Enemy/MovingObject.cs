@@ -18,6 +18,11 @@ public class MovingObject : MonoBehaviour
     {
         if (!stopped)
         {
+            if (positions.Length == 0)
+            {
+                stopped = true;
+                return;
+            }
             Move();
 
             if (Vector3.Distance(transform.position, positions[current].position) < 0.1 && !stopped)
