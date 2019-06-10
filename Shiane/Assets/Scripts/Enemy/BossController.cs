@@ -12,6 +12,7 @@ public class BossController : MonoBehaviour
 {
 
     [SerializeField] LayerMask groundLayer;
+    Animator animator;
     
     enum BossPhase
     {
@@ -71,6 +72,7 @@ public class BossController : MonoBehaviour
         }
 
         attackPosition = transform.position;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -239,6 +241,7 @@ public class BossController : MonoBehaviour
                 currentPhase = BossPhase.Shooting;
                 break;
         }
+        animator.SetInteger("Phase", (int) currentPhase);
     }
     
     public bool IsShieldUp()
