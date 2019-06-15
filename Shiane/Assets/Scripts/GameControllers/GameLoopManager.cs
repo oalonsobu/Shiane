@@ -71,7 +71,7 @@ public class GameLoopManager : MonoBehaviour {
             return; 
         }
         
-        if (Input.GetKeyDown(KeyCode.P)) {
+        if (Input.GetButtonDown("Pause")) {
             PauseGame();
         }
 

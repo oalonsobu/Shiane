@@ -48,8 +48,20 @@ public class FirePowerController : MonoBehaviour
             shootInCD = true;
             currentcdTime = cdTime;
             GameLoopManager.instance.UpdateFireballCounter(currentcdTime);
-            Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            var dir = position - transform.position;
+            float hDir = Input.GetAxis("HorizontalJoystick");
+            float vDir = Input.GetAxis("VerticalJoystick");
+            Vector3 dir = Vector3.zero;
+            if (hDir == 0) //Means that there is no controller
+            {
+                Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                dir = position - transform.position;
+            }
+            else
+            {
+                dir.x = hDir;
+                dir.y = -vDir;
+                dir.Normalize();
+            }
             var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             Instantiate(fireballPrefab, transform.position, rotation);
