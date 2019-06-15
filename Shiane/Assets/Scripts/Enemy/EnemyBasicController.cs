@@ -17,6 +17,8 @@ public class EnemyBasicController : MonoBehaviour
     BoxCollider2D collider;
     Animator animator;
     
+    AudioClip arrowClip;
+    AudioHelper audioHelper;
     
     bool canGoForward  = false;
     bool playerInRange = false;
@@ -32,6 +34,8 @@ public class EnemyBasicController : MonoBehaviour
         if (!isMele)
         {
             arrowPosition = gameObject.transform.GetChild(0);
+            arrowClip = Resources.Load<AudioClip>("Sounds/arrowHit");
+            audioHelper  = GetComponent<AudioHelper>(); 
         }
     }
 
@@ -159,6 +163,10 @@ public class EnemyBasicController : MonoBehaviour
             var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             Instantiate(arrowPrefab, arrowPosition.position, rotation);
+            if (audioHelper != null)
+            {
+                audioHelper.PlaySound(arrowClip);
+            }
         }
     }
      

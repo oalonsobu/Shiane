@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerHealthController : MonoBehaviour
 {
+    
+    AudioClip damageClip;
+    AudioHelper audioHelper;
 
     Rigidbody2D rigidbody;
     ShieldPowerController shieldPowerController;
@@ -18,6 +21,9 @@ public class PlayerHealthController : MonoBehaviour
         shieldPowerController = gameObject.GetComponent<ShieldPowerController>();
         initPoint             = GameObject.FindWithTag("InitialPoint").transform;
         deathCounter = 0;
+        
+        damageClip = Resources.Load<AudioClip>("Sounds/Ouch");
+        audioHelper  = GetComponent<AudioHelper>();
     }
 
     // Update is called once per frame
@@ -30,6 +36,7 @@ public class PlayerHealthController : MonoBehaviour
     {
         if (!shieldPowerController.IsActive() || ignoreShield)
         {
+            audioHelper.PlaySound(damageClip);
             GameLoopManager.instance.GameOver();
             deathCounter++;
             GameLoopManager.instance.UpdateDeathCounter(deathCounter);

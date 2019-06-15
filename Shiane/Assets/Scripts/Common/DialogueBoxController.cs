@@ -31,6 +31,7 @@ public class DialogueBoxController : MonoBehaviour {
     
     public void Next()
     {
+        GameLoopManager.instance.PlayClickSound();
         if (textGameObject.GetComponent<Text>().text.Length < currentText.Length)
         {
             SetCompleteText();

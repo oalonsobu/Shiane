@@ -5,10 +5,19 @@ using UnityEngine;
 public class FirePowerController : MonoBehaviour
 {
     [SerializeField] GameObject fireballPrefab;
+    
+    AudioClip fireballClip;
+    AudioHelper audioHelper;
 
     bool shootInCD = false;
     float cdTime = 1.5f;
     float currentcdTime = 0;
+
+    void Start()
+    {
+        fireballClip = Resources.Load<AudioClip>("Sounds/Foom");
+        audioHelper  = GetComponent<AudioHelper>();
+    }
 
     void Update()
     {
@@ -44,6 +53,7 @@ public class FirePowerController : MonoBehaviour
             var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             Instantiate(fireballPrefab, transform.position, rotation);
+            audioHelper.PlaySound(fireballClip);
         }
     }
 }

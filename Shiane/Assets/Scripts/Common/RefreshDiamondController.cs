@@ -7,10 +7,15 @@ public class RefreshDiamondController : MonoBehaviour
     float respawnTime = 5f;
 
     SpriteRenderer spriteRenderer;
+    
+    AudioClip diamondClip;
+    AudioHelper audioHelper;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        diamondClip    = Resources.Load<AudioClip>("Sounds/Diamond");
+        audioHelper    = GetComponent<AudioHelper>();
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -20,6 +25,10 @@ public class RefreshDiamondController : MonoBehaviour
             spriteRenderer.enabled = false;
             col.gameObject.GetComponent<PlayerMovementController>().RefreshCooldownDash();
             StartCoroutine(RefreshDiamond());
+            if (audioHelper != null)
+            {
+                audioHelper.PlaySound(diamondClip);
+            }
         }
     }
 

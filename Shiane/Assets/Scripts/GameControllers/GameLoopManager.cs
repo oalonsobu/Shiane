@@ -27,6 +27,8 @@ public class GameLoopManager : MonoBehaviour {
 
     bool endGameMenuEnabled = false;
     GameObject player;
+    
+    AudioHelper audioHelper;
 
     public Scene CurrentScene
     {
@@ -49,6 +51,16 @@ public class GameLoopManager : MonoBehaviour {
         timer = 0.0f;
         timerText.text = timer + " s";
         UpdateDeathCounter(0);
+        
+        audioHelper    = GetComponent<AudioHelper>();
+    }
+
+    public void PlayClickSound()
+    {
+        if (audioHelper != null)
+        {
+            audioHelper.PlayClickSound();
+        }   
     }
 	
 	// Update is called once per frame
@@ -95,16 +107,19 @@ public class GameLoopManager : MonoBehaviour {
     }
         
     public void PauseGame() {
+        GameLoopManager.instance.PlayClickSound();
         ShowPauseGame();
     }
 
     public void GameOver()
     {
+        GameLoopManager.instance.PlayClickSound();
         ShowGameOverMenu();
     }
     
     public void EndGame()
     {
+        GameLoopManager.instance.PlayClickSound();
         ShowMissionCompleteMenu();
     }
     

@@ -7,11 +7,14 @@ public class CreditsController : MonoBehaviour {
 
     [SerializeField] GameObject mainMenu;
 
+    AudioHelper audioHelper;
     void Start() {
+        audioHelper = GetComponent<AudioHelper>();
         gameObject.SetActive(false);
     }
 
     public void GoBack() {
+        audioHelper.PlayClickSound();
         mainMenu.SetActive(true);
         gameObject.SetActive(false);
     }

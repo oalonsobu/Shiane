@@ -10,6 +10,7 @@ public class MissionCompleteMenuController : MonoBehaviour {
     GameObject finalTextGameObject;
 
     public void NextLevel() {
+        GameLoopManager.instance.PlayClickSound();
         if (SceneManager.sceneCountInBuildSettings > GameLoopManager.instance.CurrentScene.buildIndex + 1)
         {
             SceneManager.LoadScene(GameLoopManager.instance.CurrentScene.buildIndex + 1);
@@ -20,10 +21,12 @@ public class MissionCompleteMenuController : MonoBehaviour {
     }
 
     public void Restart() {
+        GameLoopManager.instance.PlayClickSound();
         SceneManager.LoadScene(GameLoopManager.instance.CurrentScene.buildIndex);
     }
 
     public void ExitToMainMenu() {
+        GameLoopManager.instance.PlayClickSound();
         SceneManager.LoadScene("MainMenu");
     }
 

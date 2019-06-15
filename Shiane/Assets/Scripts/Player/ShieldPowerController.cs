@@ -7,8 +7,8 @@ public class ShieldPowerController : MonoBehaviour
     [SerializeField] GameObject shieldGO;
     
     bool shieldInCD = false;
-    float cdTime = 1.5f;
-    float activeTime = .25f;
+    float cdTime = 1.75f;
+    float activeTime = .5f;
     float currentcdTime = 0;
 
     void Update()

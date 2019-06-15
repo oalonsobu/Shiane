@@ -20,6 +20,11 @@ public class PlayerMovementController : MonoBehaviour {
     [Range(400, 650)] [SerializeField] int jumpForce = 400;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] LayerMask enemyLayer;
+    
+    AudioClip footStepClip;
+    AudioClip jumpClip;
+    AudioClip dashClip;
+    AudioHelper audioHelper;
 
     Vector3 currentVelocity;
     Vector3 dashDirection;
@@ -48,6 +53,11 @@ public class PlayerMovementController : MonoBehaviour {
             
         colliderSizeRaycast = 3 * collider.size.y / 4;
         GameLoopManager.instance.UpdateDashesCounter(remainingDashes);
+
+        footStepClip = Resources.Load<AudioClip>("Sounds/Footstep");
+        jumpClip     = Resources.Load<AudioClip>("Sounds/Jump");
+        dashClip     = Resources.Load<AudioClip>("Sounds/Dash");
+        audioHelper  = GetComponent<AudioHelper>();
     }
 
     void FixedUpdate()
@@ -93,6 +103,7 @@ public class PlayerMovementController : MonoBehaviour {
             else
             {
                 rigidbody.AddForce(new Vector2(0f, jumpForce));
+                audioHelper.PlaySound(jumpClip);
             }
         }
         
@@ -137,12 +148,14 @@ public class PlayerMovementController : MonoBehaviour {
         {
             rigidbody.velocity = Vector3.zero;
             rigidbody.AddForce(new Vector2(0f, jumpForce));
+            audioHelper.PlaySound(jumpClip);
             grounded = false;
         } else if (wallJumpAllowed != WallJump.NotAllowed && jump && !isDashing)
         {
             float force = jumpForce / 2;
             rigidbody.velocity = Vector3.zero;
             rigidbody.AddForce(new Vector2((wallJumpAllowed == WallJump.RightSide ? -1 : 1) * force * 2, force));
+            audioHelper.PlaySound(jumpClip);
         }
     }
     
@@ -160,6 +173,10 @@ public class PlayerMovementController : MonoBehaviour {
             isDashing = true;
             Physics2D.IgnoreLayerCollision(11, 10, true);//TODO: Get layer by name
             GameLoopManager.instance.UpdateDashesCounter(remainingDashes);
+            if (audioHelper != null)
+            {
+                audioHelper.PlaySound(dashClip);
+            }
         }
         
         if (currentDashTime > 0)
@@ -233,5 +250,13 @@ public class PlayerMovementController : MonoBehaviour {
     {
         remainingDashes = 2;
         GameLoopManager.instance.UpdateDashesCounter(remainingDashes);
+    }
+
+    public void PlayFootStep()
+    {
+        if (audioHelper != null && footStepClip != null)
+        {
+            audioHelper.PlaySound(footStepClip);
+        }
     }
 }
