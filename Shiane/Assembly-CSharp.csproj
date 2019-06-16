@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Enemy\ArrowController.cs" />
     <Compile Include="Assets\Scripts\Enemy\BossController.cs" />
     <Compile Include="Assets\Scripts\Enemy\DeadlyObject.cs" />
+    <Compile Include="Assets\Scripts\Enemy\DummyEnemyController.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBasicController.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealthController.cs" />
     <Compile Include="Assets\Scripts\Enemy\MovingObject.cs" />

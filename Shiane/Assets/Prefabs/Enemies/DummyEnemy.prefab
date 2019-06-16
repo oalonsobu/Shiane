@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2082523886188308715}
   - component: {fileID: 4909585143764711053}
   - component: {fileID: 4194984798818868823}
+  - component: {fileID: 9159520253563184068}
   m_Layer: 10
   m_Name: DummyEnemy
   m_TagString: Untagged
@@ -99,3 +100,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9159520253563184068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2591796876942051532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b4d8665f6082a498e9102a8f2ac61f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
