@@ -13,6 +13,7 @@ public class PlayerHealthController : MonoBehaviour
     Transform initPoint;
 
     int deathCounter;
+    bool isDead = false;
     
     // Start is called before the first frame update
     void Start()
@@ -22,8 +23,8 @@ public class PlayerHealthController : MonoBehaviour
         initPoint             = GameObject.FindWithTag("InitialPoint").transform;
         deathCounter = 0;
         
-        damageClip = Resources.Load<AudioClip>("Sounds/Ouch");
-        audioHelper  = GetComponent<AudioHelper>();
+        damageClip  = Resources.Load<AudioClip>("Sounds/Ouch");
+        audioHelper = GetComponent<AudioHelper>();
     }
 
     // Update is called once per frame
@@ -34,8 +35,11 @@ public class PlayerHealthController : MonoBehaviour
     
     public void KillPlayer(bool ignoreShield)
     {
+        if (isDead) return;
         if (!shieldPowerController.IsActive() || ignoreShield)
         {
+            DestroyAllArrows();
+            isDead = true;
             audioHelper.PlaySound(damageClip);
             GameLoopManager.instance.GameOver();
             deathCounter++;
@@ -47,14 +51,27 @@ public class PlayerHealthController : MonoBehaviour
     {
         gameObject.transform.position = initPoint.position;
         gameObject.transform.rotation = initPoint.rotation;
+        rigidbody.position = transform.position; //Avoid dying twice (falling) because the rigidbody does not update instantly
         Camera.main.GetComponent<ParallaxController>().InitCamera();
+        isDead = false;
     }
 
     void CheckFallDeath()
     {
-        if (rigidbody.position.y < -2)
+        if (rigidbody.position.y < -2 && !isDead)
         {
+            Debug.Log(rigidbody.position.y);
             KillPlayer(true);
+        }
+    }
+    
+    void DestroyAllArrows()
+    {
+        var gameObjects = GameObject.FindGameObjectsWithTag("Arrow");
+         
+        foreach(var gameObject in gameObjects)
+        {
+            Destroy(gameObject);
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Numerics;
 using UnityEngine;
 using UnityEngine.UI;
 using Quaternion = UnityEngine.Quaternion;
+using Random = UnityEngine.Random;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
@@ -39,8 +40,10 @@ public class BossController : MonoBehaviour
     [SerializeField] GameObject arrowPrefab;
     List<GameObject> arrowPositions = new List<GameObject>();
     bool shootArrowsInCD = false;
-    float shootArrowsCdTime = .5f;
+    float shootArrowsCdTime = .75f;
     float shootArrowsCurrentcdTime = .0f;
+    Vector3 positionToGo = Vector3.zero;
+    float levitatingSpeed = 1f;
 
     //GoingDown phase vars
     Vector3 reposePosition = Vector3.zero;
@@ -105,7 +108,7 @@ public class BossController : MonoBehaviour
         {
             Vector3 direction = attackPosition - transform.position;
             transform.Translate(direction.normalized * goingUpSpeed * Time.deltaTime);
-            if (Vector3.Distance(attackPosition, transform.position) < 0.1f || attackPosition.y < transform.position.y)
+            if (AlreadyInPosition(attackPosition) || attackPosition.y < transform.position.y)
             {
                 ChangePhase(BossPhase.Shooting);
             }
@@ -119,7 +122,7 @@ public class BossController : MonoBehaviour
             Vector3 direction = reposePosition - transform.position;
             transform.Translate(direction.normalized * fallingSpeed * Time.deltaTime);
             
-            if (Vector3.Distance(transform.position, reposePosition) < 0.1f || transform.position.y < reposePosition.y)
+            if (AlreadyInPosition(reposePosition) || transform.position.y < reposePosition.y)
             {
                 ChangePhase(BossPhase.Down);
             }
@@ -157,6 +160,17 @@ public class BossController : MonoBehaviour
                 shootArrowsCurrentcdTime = 0;
                 shootArrowsInCD = false;
             }
+        }
+
+        if (positionToGo == Vector3.zero || AlreadyInPosition(positionToGo))
+        {
+            UpdateRandomPositionToGo();
+        }
+
+        if (positionToGo != Vector3.zero)
+        {
+            Vector3 direction = positionToGo - transform.position;
+            transform.Translate(direction.normalized * levitatingSpeed * Time.deltaTime);
         }
     }
 
@@ -255,5 +269,22 @@ public class BossController : MonoBehaviour
     public bool IsShieldUp()
     {
         return isShieldUp;
+    }
+
+    bool AlreadyInPosition(Vector3 destination)
+    {
+        return Vector3.Distance(transform.position, destination) < 0.1f;
+    }
+
+    void UpdateRandomPositionToGo()
+    {
+        float x    = Random.Range(1f, 3f);
+        int sign   = Random.Range(0, 2);
+
+        positionToGo = transform.position;
+        positionToGo.x = positionToGo.x + x * (sign == 0 ? -1 : 1);
+
+        if (positionToGo.x < -5) positionToGo.x += 10;
+        if (positionToGo.x > 5) positionToGo.x -= 10;
     }
 }

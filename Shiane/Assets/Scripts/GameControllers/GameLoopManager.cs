@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
@@ -86,7 +87,7 @@ public class GameLoopManager : MonoBehaviour {
         }
         else
         {
-            player.GetComponent<PlayerHealthController>().Respawn();
+            StartCoroutine(StartGameOverAnimation());
         }       
     }
 
@@ -167,5 +168,33 @@ public class GameLoopManager : MonoBehaviour {
     public void UpdateFireballCounter(float time)
     {
         fireballCounterText.text = String.Format("{0:0.00}", time) + " s";
+    }
+    
+    IEnumerator StartGameOverAnimation()
+    {
+        Time.timeScale = 0f;
+        GameObject g = GameObject.Find("Canvas/UID/BlackScreen");
+        while (true)
+        {
+            yield return new WaitForSecondsRealtime(0.1f);
+            if (g != null)
+            {
+                g.GetComponent<Image>().color = new Color(1,1,1,  g.GetComponent<Image>().color.a + 0.1f);
+            }
+            else
+            {
+                break;
+            }
+
+            if (g.GetComponent<Image>().color.a >= 1f)
+            {
+                break;    
+            }
+        }
+        yield return new WaitForSecondsRealtime (1f);
+        player.GetComponent<PlayerHealthController>().Respawn();
+        g.GetComponent<Image>().color = new Color(1,1,1,  0);
+        yield return new WaitForSecondsRealtime (.1f);
+        Time.timeScale = 1f;
     }
 }
