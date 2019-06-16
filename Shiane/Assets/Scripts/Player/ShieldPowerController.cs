@@ -6,6 +6,9 @@ public class ShieldPowerController : MonoBehaviour
 {
     [SerializeField] GameObject shieldGO;
     
+    [SerializeField]
+    bool shieldActive = true;
+    
     bool shieldInCD = false;
     float cdTime = 1.75f;
     float activeTime = .5f;
@@ -13,6 +16,7 @@ public class ShieldPowerController : MonoBehaviour
 
     void Update()
     {
+        if (!shieldActive) return;
         UpdateCD();
         ActivateShield();
     }

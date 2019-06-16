@@ -5,6 +5,9 @@ using UnityEngine;
 public class FirePowerController : MonoBehaviour
 {
     [SerializeField] GameObject fireballPrefab;
+
+    [SerializeField]
+    bool fireballActive = true;
     
     AudioClip fireballClip;
     AudioHelper audioHelper;
@@ -21,6 +24,7 @@ public class FirePowerController : MonoBehaviour
 
     void Update()
     {
+        if (!fireballActive) return;
         UpdateCD();
         Shoot();
     }

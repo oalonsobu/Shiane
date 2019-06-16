@@ -16,6 +16,7 @@ public class PlayerMovementController : MonoBehaviour {
 
     [Range(0, 5f)] [SerializeField] float playerSpeed = 5f;
     [Range(0, 20f)] [SerializeField] float dashVelocity = 20f;
+    [Range(0, 2f)] [SerializeField] int maxDashes = 2;
     [Range(0, .3f)] [SerializeField] float movementSmoothing = .05f;
     [Range(400, 650)] [SerializeField] int jumpForce = 400;
     [SerializeField] LayerMask groundLayer;
@@ -30,7 +31,7 @@ public class PlayerMovementController : MonoBehaviour {
     Vector3 dashDirection;
     float dashTime = 0.1f;
     float currentDashTime;
-    int remainingDashes = 2;
+    int remainingDashes;
     bool dashReleased = true;
     bool isDashing = false;
     bool grounded = true;
@@ -45,6 +46,7 @@ public class PlayerMovementController : MonoBehaviour {
 
     void Start ()
     {
+        remainingDashes = maxDashes;
         currentVelocity = Vector2.zero;
         rigidbody       = gameObject.GetComponent<Rigidbody2D>();
         collider        = gameObject.GetComponent<CapsuleCollider2D>();
@@ -109,7 +111,7 @@ public class PlayerMovementController : MonoBehaviour {
         
         if (hit.collider != null)
         {
-            remainingDashes = 2;
+            remainingDashes = maxDashes;
             GameLoopManager.instance.UpdateDashesCounter(remainingDashes);
             grounded = true;
         }
@@ -248,7 +250,7 @@ public class PlayerMovementController : MonoBehaviour {
 
     public void RefreshCooldownDash()
     {
-        remainingDashes = 2;
+        remainingDashes = maxDashes;
         GameLoopManager.instance.UpdateDashesCounter(remainingDashes);
     }
 
