@@ -7,7 +7,9 @@ public class DialoguePointController : MonoBehaviour
 {
     [SerializeField]
     string[] text;
-
+    [SerializeField][Tooltip("Who says the line above")]
+    string[] actorText;
+    
     [SerializeField]
     PlayableDirector[] cutSceneGO;
     [SerializeField][Tooltip("When the cutScene will play")]
@@ -27,7 +29,7 @@ public class DialoguePointController : MonoBehaviour
         if (col.gameObject.layer == 11) //TODO: Get layer by name
         {
             pointReached = true;
-            GameLoopManager.instance.InitializeDialogueText(text, cutSceneGO, playableIndex);
+            GameLoopManager.instance.InitializeDialogueText(text, actorText, cutSceneGO, playableIndex);
         }
     }
 }

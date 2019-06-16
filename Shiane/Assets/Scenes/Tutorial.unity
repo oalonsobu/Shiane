@@ -186,6 +186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
         type: 3}
+      propertyPath: actorText.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
       propertyPath: text.Array.data[0]
       value: Veo que has usado el poder de Kaze. Los dioses existimos...
       objectReference: {fileID: 0}
@@ -706,6 +711,11 @@ PrefabInstance:
       propertyPath: text.Array.data[2]
       value: "Entiendo que no te fies de \xE9l, que creas que todo esto es mentira.
         Piensas que los dioses ya ha desaparecido para siempre. Pero no es as\xED."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[0]
+      value: Hikari
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66e79c747e476ea4bb060678f8a5a4be, type: 3}
@@ -2524,21 +2534,6 @@ PrefabInstance:
       propertyPath: m_Text
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8833452749360783765, guid: 50145aeef47988147bddcc4684a45039,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8833452749360783765, guid: 50145aeef47988147bddcc4684a45039,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8833452749360783765, guid: 50145aeef47988147bddcc4684a45039,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8833452749702138139, guid: 50145aeef47988147bddcc4684a45039,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2659,6 +2654,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8833452749360783765, guid: 50145aeef47988147bddcc4684a45039,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833452749360783765, guid: 50145aeef47988147bddcc4684a45039,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833452749360783765, guid: 50145aeef47988147bddcc4684a45039,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50145aeef47988147bddcc4684a45039, type: 3}
 --- !u!1001 &1230374341
@@ -2742,6 +2752,11 @@ PrefabInstance:
         type: 3}
       propertyPath: playableIndex.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
         type: 3}
@@ -3325,6 +3340,31 @@ PrefabInstance:
       propertyPath: playableIndex.Array.data[1]
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[0]
+      value: Hikari
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[1]
+      value: Hikari
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[2]
+      value: Soldado
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[3]
+      value: Soldado
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[4]
+      value: Hikari
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66e79c747e476ea4bb060678f8a5a4be, type: 3}
 --- !u!114 &1259274434 stripped
@@ -3495,6 +3535,11 @@ PrefabInstance:
         type: 3}
       propertyPath: text.Array.size
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
         type: 3}
@@ -4017,6 +4062,11 @@ PrefabInstance:
       propertyPath: text.Array.data[2]
       value: "Entiendo que no te fies de \xE9l, que creas que todo esto es mentira.
         Piensas que los dioses ya ha desaparecido para siempre. Pero no es as\xED."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[0]
+      value: Kaze
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66e79c747e476ea4bb060678f8a5a4be, type: 3}
@@ -5110,6 +5160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
         type: 3}
+      propertyPath: actorText.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
       propertyPath: text.Array.data[0]
       value: Hola Tyson.
       objectReference: {fileID: 0}
@@ -5638,6 +5693,51 @@ PrefabInstance:
         y miles de a\xF1os, desde que empec\xE9 la guerra con Kurayami... Aunque supongo
         que ya conoces la historia. El dios de la luz y de la oscuridad se enfrentan
         en una batalla que durar\xE1 hasta el fin de los tiempos...."
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[0]
+      value: Hikari
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[1]
+      value: Hikari
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[2]
+      value: Hikari
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[3]
+      value: Hikari
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[4]
+      value: Hikari
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[5]
+      value: Hikari
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[6]
+      value: Hikari
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[7]
+      value: Hikari
+      objectReference: {fileID: 0}
+    - target: {fileID: 594411326034309713, guid: 66e79c747e476ea4bb060678f8a5a4be,
+        type: 3}
+      propertyPath: actorText.Array.data[8]
+      value: Hikari
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66e79c747e476ea4bb060678f8a5a4be, type: 3}

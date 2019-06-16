@@ -13,15 +13,18 @@ public class DialogueBoxController : MonoBehaviour {
     GameObject buttonGameObject;
     
     string[] text;
+    string[] actor;
     string currentText;
+    string currentActor;
     int textPointer = 0;
     int charPointer = 0;
     PlayableDirector[] playableDirector;
     int[] playableIndex;
     
-    public void Init(string[] t, PlayableDirector[] p, int[] pi)
+    public void Init(string[] t, string[] a, PlayableDirector[] p, int[] pi)
     {
         text = t;
+        actor = a;
         playableDirector = p;
         playableIndex = pi;
         textPointer = 0;
@@ -52,20 +55,21 @@ public class DialogueBoxController : MonoBehaviour {
     
     void SetCompleteText()
     {
-        textGameObject.GetComponent<Text>().text = currentText;
+        textGameObject.GetComponent<Text>().text = currentActor + currentText;
         charPointer = currentText.Length;
     }
    
     IEnumerator UpdateText()
     {   
-        currentText = text[textPointer];
-        charPointer = 0;
+        currentText  = text[textPointer];
+        currentActor = GetCurrentActor();
+        charPointer  = 0;
         textPointer++;
-        textGameObject.GetComponent<Text>().text = "";
+        textGameObject.GetComponent<Text>().text = currentActor;
         while (true)
         {
             yield return new WaitForSecondsRealtime (0.1f);
-            if (textGameObject.GetComponent<Text>().text.Length >= currentText.Length)
+            if (textGameObject.GetComponent<Text>().text.Length - currentActor.Length >= currentText.Length)
             {
                 break;
             }
@@ -90,6 +94,19 @@ public class DialogueBoxController : MonoBehaviour {
         playableIndex[currentIndex] = -1;
         buttonGameObject.GetComponent<Button>().interactable = true;
         Next();
-        
+    }
+
+    string GetCurrentActor()
+    {
+        int aux = 0;
+        if (actor.Length - 1 < textPointer)
+        {
+            aux = actor.Length - 1;
+        }
+        else
+        {
+            aux = textPointer;
+        }
+        return actor[aux] + ":\n";
     }
 }

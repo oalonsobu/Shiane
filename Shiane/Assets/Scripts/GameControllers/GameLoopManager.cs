@@ -123,13 +123,13 @@ public class GameLoopManager : MonoBehaviour {
         ShowMissionCompleteMenu();
     }
     
-    public void InitializeDialogueText(string[] t, PlayableDirector[] p, int[] pi)
+    public void InitializeDialogueText(string[] t, string[] a, PlayableDirector[] p, int[] pi)
     {
         if (!dialogueBox.activeSelf)
         {
             dialogueBox.SetActive(true);
             Time.timeScale = 0;
-            dialogueBox.GetComponent<DialogueBoxController>().Init(t, p, pi);
+            dialogueBox.GetComponent<DialogueBoxController>().Init(t, a, p, pi);
         }
     }
     
