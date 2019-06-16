@@ -93,7 +93,7 @@ public class GameLoopManager : MonoBehaviour {
 
     void ShowMissionCompleteMenu() {
         missionCompleteMenu.SetActive(true);
-        missionCompleteMenu.GetComponent<MissionCompleteMenuController>().setText(0,0);
+        missionCompleteMenu.GetComponent<MissionCompleteMenuController>().setText(deathCounterText.text);
         Time.timeScale = 0;
     }
 

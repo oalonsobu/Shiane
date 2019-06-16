@@ -31,7 +31,7 @@ public class MissionCompleteMenuController : MonoBehaviour {
     }
 
     //TODO
-    public void setText(int killed, int total)
+    public void setText(string deathsText)
     {
         //TODO: Get name level
         if (GameLoopManager.instance.CurrentScene.name == "tutorial")
@@ -41,7 +41,7 @@ public class MissionCompleteMenuController : MonoBehaviour {
         {
             finalTextGameObject.GetComponent<Text>().text = "Mission passed";
         }
-        finalTextGameObject.GetComponent<Text>().text = killed + "/" + total + " Killed";
+        finalTextGameObject.GetComponent<Text>().text = deathsText;
     }
 
 }
