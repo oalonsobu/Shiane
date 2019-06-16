@@ -50,6 +50,10 @@ public class BossController : MonoBehaviour
     Vector3 attackPosition;
     float goingUpSpeed = 2.5f;
     
+    //Down phase vars
+    [SerializeField] GameObject shockwavePrefab;
+    
+    
     BossPhase currentPhase;
     
     // Start is called before the first frame update
@@ -208,6 +212,10 @@ public class BossController : MonoBehaviour
             }
             else
             {
+                if (shockwavePrefab != null)
+                {
+                    Instantiate(shockwavePrefab, transform);   
+                }
                 ChangePhase(BossPhase.GoingUp);
             }
         }

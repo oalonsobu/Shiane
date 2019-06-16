@@ -1333,6 +1333,8 @@ MonoBehaviour:
   shieldUI: {fileID: 1682765077}
   arrowPrefab: {fileID: 2766107008943145663, guid: 0d997af915af38241a92339f7e047eab,
     type: 3}
+  shockwavePrefab: {fileID: 1310874619453170, guid: 5b8856bf8b27ebc4fa69e4ef235f492a,
+    type: 3}
 --- !u!58 &592390751
 CircleCollider2D:
   m_ObjectHideFlags: 0
