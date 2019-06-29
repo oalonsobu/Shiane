@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/oscar/Desktop/uoc/Shiane.exe
+C:/Users/oscar/Desktop/uoc/Build/Shiane.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/Tutorial.unity

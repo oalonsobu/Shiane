@@ -20,7 +20,14 @@ public class DialogueBoxController : MonoBehaviour {
     int charPointer = 0;
     PlayableDirector[] playableDirector;
     int[] playableIndex;
-    
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Next ")) {
+            Next();
+        }
+    }
+
     public void Init(string[] t, string[] a, PlayableDirector[] p, int[] pi)
     {
         text = t;

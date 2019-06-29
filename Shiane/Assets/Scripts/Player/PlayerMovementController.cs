@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.VR;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class PlayerMovementController : MonoBehaviour {
     
@@ -62,7 +65,7 @@ public class PlayerMovementController : MonoBehaviour {
         audioHelper  = GetComponent<AudioHelper>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         UpdateGrounded();
         Dash();
@@ -166,9 +169,10 @@ public class PlayerMovementController : MonoBehaviour {
         bool dash = dashReleased && Input.GetAxis("Dash") > 0;
         Vector3 vForce = Vector3.up * Input.GetAxis("Vertical");
         Vector3 hForce = Vector3.right * Input.GetAxis("Horizontal");
-        dashDirection = hForce.normalized + vForce.normalized;
-        if (remainingDashes > 0 && dash && Math.Abs(dashDirection.magnitude) > 0)
+        Vector3 auxDashDirection = hForce.normalized + vForce.normalized;
+        if (remainingDashes > 0 && dash && Math.Abs(auxDashDirection.magnitude) > 0)
         {
+            dashDirection = auxDashDirection;
             remainingDashes--;
             dashReleased = false;
             currentDashTime = dashTime;
