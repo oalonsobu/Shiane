@@ -23,7 +23,7 @@ public class DialogueBoxController : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetButtonDown("Next ")) {
+        if (Input.GetButtonDown("Next")) {
             Next();
         }
     }
